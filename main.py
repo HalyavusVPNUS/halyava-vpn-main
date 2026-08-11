@@ -35,8 +35,7 @@ MAX_SERVERS = 50
 
 PROFILE_INFO = {
     "title": "Халява ВПН | Main 📡",
-    "update_interval": 1,
-    "expire": 2556326400,  # 10.12.2050
+    "expire": 2556326400,
     "total": 10995116277760,
     "used": 0,
     "web_page": "https://t.me/halyava_vpnz",
@@ -264,9 +263,14 @@ def build_xray_config(results):
     outbounds.append({"tag": "block", "protocol": "blackhole"})
 
     config = {
-        "remarks": SELECTOR_NAME,
-        "ps": SELECTOR_NAME,
+        # ПРОФИЛЬ МЕТАДАННЫЕ (поддерживаются клиентами)
+        "ps": PROFILE_INFO["title"],
+        "remarks": PROFILE_INFO["title"],
+        "subscribe": PROFILE_INFO["web_page"],
+        "subscriptionUserinfo": f"expire={PROFILE_INFO['expire']}; total={PROFILE_INFO['total']}; used={PROFILE_INFO['used']}",
+        "announce": PROFILE_INFO["announce"],
 
+        # XRAY КОНФИГ
         "log": {"loglevel": "warning"},
 
         "dns": {
@@ -318,27 +322,6 @@ def build_xray_config(results):
     }
 
     return config
-
-# =========================
-# BUILD PROFILE WITH METADATA
-# =========================
-
-def build_profile_content(config):
-    """Генерирует контент с метаданными профиля и конфигом"""
-    
-    # Строим хедер с метаданными профиля
-    metadata = f"""#profile-title: {PROFILE_INFO['title']}
-#profile-update-interval: {PROFILE_INFO['update_interval']}
-#subscription-userinfo: expire={PROFILE_INFO['expire']}; total={PROFILE_INFO['total']}; used={PROFILE_INFO['used']}
-#profile-web-page-url: {PROFILE_INFO['web_page']}
-#announce: {PROFILE_INFO['announce']}
-"""
-    
-    # JSON конфиг
-    config_json = json.dumps(config, ensure_ascii=False, indent=2)
-    
-    # Объединяем
-    return metadata + config_json
 
 # =========================
 # GITHUB
@@ -469,13 +452,15 @@ def run_once():
     print(f"🎯 Топ {len(results)} серверов по пингу")
 
     config = build_xray_config(results)
-    content = build_profile_content(config)
+    content = json.dumps(config, ensure_ascii=False, indent=2)
 
     print(f"📤 Загрузка на GitHub...")
     update_repo(content)
 
-    print(f"✨ ГОТОВО! {len(results)} серверов упаковано в '{SELECTOR_NAME}'")
+    print(f"✨ ГОТОВО! {len(results)} серверов упаковано")
     print(f"📋 Файл: {FILE_PATH}")
+    print(f"📌 Название: {PROFILE_INFO['title']}")
+    print(f"📅 Истекает: {time.strftime('%d.%m.%Y', time.gmtime(PROFILE_INFO['expire']))}")
 
 if __name__ == "__main__":
     run_once()
