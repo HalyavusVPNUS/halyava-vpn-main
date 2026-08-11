@@ -27,23 +27,10 @@ BANNED_COUNTRIES = ['RU', 'CN', 'KP', 'IR']
 HEADERS = {"User-Agent": "Mozilla/5.0"}
 
 SELECTOR_NAME = "🇪🇺 АВТОВЫБОР | WI-FI"
-MAX_SERVERS = 50
+MAX_SERVERS = 50  # сколько лучших серверов класть в баланс-группу
 
 # =========================
-# ПРОФИЛЬ ИНФОРМАЦИЯ
-# =========================
-
-PROFILE_INFO = {
-    "title": "Халява ВПН | Main 📡",
-    "expire": 2556326400,
-    "total": 10995116277760,
-    "used": 0,
-    "web_page": "https://t.me/halyava_vpnz",
-    "announce": "Автовыборная подписка, из Mini VPN-подписки) @halyava_vpnz"
-}
-
-# =========================
-# СТРАНЫ
+# СТРАНЫ (для тегов отдельных outbound'ов)
 # =========================
 
 RU_COUNTRIES = {
@@ -165,6 +152,7 @@ def is_valid_vless(main_part: str) -> bool:
 
 # =========================
 # VLESS -> XRAY-CORE OUTBOUND
+# (формат, который напрямую понимают Happ и v2RayTun)
 # =========================
 
 def vless_to_xray_outbound(main_part: str, tag: str):
@@ -244,133 +232,6 @@ def vless_to_xray_outbound(main_part: str, tag: str):
         return None
 
 # =========================
-# BUILD XRAY-CORE CONFIG
-# =========================
-
-def build_xray_config(results):
-    outbounds = []
-    proxy_tags = []
-
-    for idx, item in enumerate(results, 1):
-        tag = f"proxy-{idx}"
-        outbound = vless_to_xray_outbound(item["main"], tag)
-        if outbound is None:
-            continue
-        outbounds.append(outbound)
-        proxy_tags.append(tag)
-
-    outbounds.append({"tag": "direct", "protocol": "freedom"})
-    outbounds.append({"tag": "block", "protocol": "blackhole"})
-
-    config = {
-        # ПРОФИЛЬ МЕТАДАННЫЕ (поддерживаются клиентами)
-        "ps": PROFILE_INFO["title"],
-        "remarks": PROFILE_INFO["title"],
-        "subscribe": PROFILE_INFO["web_page"],
-        "subscriptionUserinfo": f"expire={PROFILE_INFO['expire']}; total={PROFILE_INFO['total']}; used={PROFILE_INFO['used']}",
-        "announce": PROFILE_INFO["announce"],
-
-        # XRAY КОНФИГ
-        "log": {"loglevel": "warning"},
-
-        "dns": {
-            "servers": ["https://1.1.1.1/dns-query", "localhost"]
-        },
-
-        "inbounds": [
-            {
-                "tag": "socks-in",
-                "port": 10808,
-                "listen": "127.0.0.1",
-                "protocol": "socks",
-                "settings": {"udp": True},
-            },
-            {
-                "tag": "http-in",
-                "port": 10809,
-                "listen": "127.0.0.1",
-                "protocol": "http",
-            },
-        ],
-
-        "outbounds": outbounds,
-
-        "observatory": {
-            "subjectSelector": ["proxy-"],
-            "probeUrl": "https://www.gstatic.com/generate_204",
-            "probeInterval": "60s",
-            "enableConcurrency": True,
-        },
-
-        "routing": {
-            "domainStrategy": "AsIs",
-            "balancers": [
-                {
-                    "tag": "auto",
-                    "selector": ["proxy-"],
-                    "strategy": {"type": "leastPing"},
-                }
-            ],
-            "rules": [
-                {
-                    "type": "field",
-                    "network": "tcp,udp",
-                    "balancerTag": "auto",
-                }
-            ],
-        },
-    }
-
-    return config
-
-# =========================
-# GITHUB
-# =========================
-
-def update_repo(content: str):
-    if not GITHUB_USER or not REPO_NAME or not TOKEN:
-        raise RuntimeError(
-            f"Не заданы секреты: GH_USER={bool(GITHUB_USER)}, "
-            f"GH_REPO={bool(REPO_NAME)}, GH_TOKEN={bool(TOKEN)}"
-        )
-
-    url = f"https://api.github.com/repos/{GITHUB_USER}/{REPO_NAME}/contents/{FILE_PATH}"
-
-    headers = {
-        "Authorization": f"token {TOKEN}",
-        "Accept": "application/vnd.github.v3+json",
-    }
-
-    sha = None
-    r = requests.get(url, headers=headers)
-    print(f"GET {url} -> {r.status_code}")
-    if r.status_code == 200:
-        sha = r.json().get("sha")
-    elif r.status_code != 404:
-        print(r.text)
-
-    encoded = base64.b64encode(content.encode()).decode()
-
-    payload = {
-        "message": f"Auto update {time.strftime('%H:%M:%S')}",
-        "content": encoded,
-        "branch": "main",
-    }
-
-    if sha:
-        payload["sha"] = sha
-
-    put_r = requests.put(url, headers=headers, json=payload)
-    print(f"PUT {url} -> {put_r.status_code}")
-
-    if put_r.status_code not in (200, 201):
-        print(put_r.text)
-        raise RuntimeError(
-            f"Не удалось записать {FILE_PATH} в репозиторий: "
-            f"{put_r.status_code} {put_r.text}"
-        )
-
-# =========================
 # PROCESS ONE KEY
 # =========================
 
@@ -418,49 +279,159 @@ def process_key(key):
         return None
 
 # =========================
+# BUILD XRAY-CORE CONFIG
+# =========================
+
+def build_xray_config(results):
+    outbounds = []
+    proxy_tags = []
+
+    for idx, item in enumerate(results, 1):
+        tag = f"proxy-{idx}"
+        outbound = vless_to_xray_outbound(item["main"], tag)
+        if outbound is None:
+            continue
+        outbounds.append(outbound)
+        proxy_tags.append(tag)
+
+    outbounds.append({"tag": "direct", "protocol": "freedom"})
+    outbounds.append({"tag": "block", "protocol": "blackhole"})
+
+    config = {
+        # Имя/описание конфига — так его подпишет Happ при импорте по URL
+        "remarks": SELECTOR_NAME,
+        "ps": SELECTOR_NAME,
+        "meta": {"serverDescription": SELECTOR_NAME},
+
+        "log": {"loglevel": "warning"},
+
+        "dns": {
+            "servers": ["https://1.1.1.1/dns-query", "localhost"]
+        },
+
+        "inbounds": [
+            {
+                "tag": "socks-in",
+                "port": 10808,
+                "listen": "127.0.0.1",
+                "protocol": "socks",
+                "settings": {"udp": True},
+            },
+            {
+                "tag": "http-in",
+                "port": 10809,
+                "listen": "127.0.0.1",
+                "protocol": "http",
+            },
+        ],
+
+        "outbounds": outbounds,
+
+        # Наблюдатель, который постоянно пингует все proxy-* и знает, кто быстрее
+        "observatory": {
+            "subjectSelector": ["proxy-"],
+            "probeUrl": "https://www.gstatic.com/generate_204",
+            "probeInterval": "60s",
+            "enableConcurrency": True,
+        },
+
+        "routing": {
+            "domainStrategy": "AsIs",
+            "balancers": [
+                {
+                    "tag": "auto",
+                    "selector": ["proxy-"],
+                    "strategy": {"type": "leastPing"},
+                }
+            ],
+            "rules": [
+                {
+                    "type": "field",
+                    "network": "tcp,udp",
+                    "balancerTag": "auto",
+                }
+            ],
+        },
+    }
+
+    return config
+
+# =========================
+# GITHUB
+# =========================
+
+def update_repo(content: str):
+    if not GITHUB_USER or not REPO_NAME or not TOKEN:
+        raise RuntimeError(
+            f"Не заданы секреты: GH_USER={bool(GITHUB_USER)}, "
+            f"GH_REPO={bool(REPO_NAME)}, GH_TOKEN6={bool(TOKEN)}"
+        )
+
+    url = f"https://api.github.com/repos/{GITHUB_USER}/{REPO_NAME}/contents/{FILE_PATH}"
+
+    headers = {
+        "Authorization": f"token {TOKEN}",
+        "Accept": "application/vnd.github.v3+json",
+    }
+
+    sha = None
+    r = requests.get(url, headers=headers)
+    print(f"GET {url} -> {r.status_code}")
+    if r.status_code == 200:
+        sha = r.json().get("sha")
+    elif r.status_code != 404:
+        print(r.text)
+
+    encoded = base64.b64encode(content.encode()).decode()
+
+    payload = {
+        "message": f"Auto update {time.strftime('%H:%M:%S')}",
+        "content": encoded,
+        "branch": "main",
+    }
+
+    if sha:
+        payload["sha"] = sha
+
+    put_r = requests.put(url, headers=headers, json=payload)
+    print(f"PUT {url} -> {put_r.status_code}")
+
+    if put_r.status_code not in (200, 201):
+        print(put_r.text)
+        raise RuntimeError(
+            f"Не удалось записать {FILE_PATH} в репозиторий: "
+            f"{put_r.status_code} {put_r.text}"
+        )
+
+# =========================
 # MAIN
 # =========================
 
 def run_once():
-    print("🚀 Запуск сборки конфига...")
-    
     all_keys = []
 
     for src in SOURCES:
         try:
-            print(f"📥 Загрузка из {src}...")
             r = requests.get(src, headers=HEADERS, timeout=15)
             found = re.findall(r'vless://[^\s]+', r.text)
             all_keys.extend(found)
-            print(f"   Найдено {len(found)} ключей")
-        except Exception as e:
-            print(f"   Ошибка: {e}")
+        except:
             continue
 
     unique_keys = list(set(all_keys))
-    print(f"📊 Уникальных ключей: {len(unique_keys)}")
 
-    print(f"⏱️  Проверка ключей (параллельно)...")
     with ThreadPoolExecutor(max_workers=30) as ex:
         results = list(filter(None, ex.map(process_key, unique_keys)))
-
-    print(f"✅ Валидных серверов: {len(results)}")
 
     results.sort(key=lambda x: x["ping"])
     results = results[:MAX_SERVERS]
 
-    print(f"🎯 Топ {len(results)} серверов по пингу")
-
     config = build_xray_config(results)
     content = json.dumps(config, ensure_ascii=False, indent=2)
 
-    print(f"📤 Загрузка на GitHub...")
     update_repo(content)
 
-    print(f"✨ ГОТОВО! {len(results)} серверов упаковано")
-    print(f"📋 Файл: {FILE_PATH}")
-    print(f"📌 Название: {PROFILE_INFO['title']}")
-    print(f"📅 Истекает: {time.strftime('%d.%m.%Y', time.gmtime(PROFILE_INFO['expire']))}")
+    print(f"DONE: {len(results)} servers packed into '{SELECTOR_NAME}'")
 
 if __name__ == "__main__":
     run_once()
