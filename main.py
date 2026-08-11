@@ -1,78 +1,95 @@
-
+import requests
 import os
 import re
-import json
-import time
 import socket
-import requests
+import time
+import json
 import base64
-
 from concurrent.futures import ThreadPoolExecutor
 from urllib.parse import urlparse, parse_qs
-
 
 # =========================
 # НАСТРОЙКИ
 # =========================
 
-GH_USER = os.getenv("GH_USER")
-GH_REPO = os.getenv("GH_REPO")
+GITHUB_USER = os.getenv("GH_USER")
+REPO_NAME = os.getenv("GH_REPO")
 TOKEN = os.getenv("GH_TOKEN6")
 
-FILE_PATH = "server.json"
+FILE_PATH = "config.json"
 
 SOURCES = [
     "https://raw.githubusercontent.com/ShadowException/VPN/refs/heads/main/configs/VPN-cat"
 ]
 
-BANNED_COUNTRIES = ["RU", "CN", "KP", "IR"]
+BANNED_COUNTRIES = ['RU', 'CN', 'KP', 'IR']
 
-HEADERS = {
-    "User-Agent": "Mozilla/5.0"
-}
+HEADERS = {"User-Agent": "Mozilla/5.0"}
 
-MAX_SERVERS = 200
-
+SELECTOR_TAG = "🇪🇺 АВТОВЫБОР | WI-FI"
+MAX_SERVERS = 50  # сколько лучших серверов класть в urltest-группу
 
 # =========================
-# СТРАНЫ
+# СТРАНЫ (для тегов отдельных outbound'ов)
 # =========================
 
 RU_COUNTRIES = {
-    "US": "США",
-    "DE": "Германия",
-    "NL": "Нидерланды",
-    "FI": "Финляндия",
-    "SE": "Швеция",
-    "PL": "Польша",
-    "EE": "Эстония",
-    "LV": "Латвия",
-    "LT": "Литва",
-    "FR": "Франция",
-    "GB": "Великобритания",
-    "CH": "Швейцария",
-    "NO": "Норвегия",
-    "IT": "Италия",
-    "ES": "Испания",
-    "CZ": "Чехия",
-    "AT": "Австрия",
-    "BE": "Бельгия",
-    "DK": "Дания",
-    "RO": "Румыния",
-    "BG": "Болгария",
-    "TR": "Турция",
-    "GE": "Грузия",
-    "KZ": "Казахстан",
-    "UA": "Украина",
-    "CA": "Канада",
-    "JP": "Япония",
-    "SG": "Сингапур",
-    "AU": "Австралия",
-    "IN": "Индия",
-    "IL": "Израиль",
-    "KR": "Южная Корея",
+    "AF": "Афганистан", "AL": "Албания", "DZ": "Алжир", "AS": "Американское Самоа",
+    "AD": "Андорра", "AO": "Ангола", "AI": "Ангилья", "AQ": "Антарктида",
+    "AG": "Антигуа и Барбуда", "AR": "Аргентина", "AM": "Армения", "AW": "Аруба",
+    "AU": "Австралия", "AT": "Австрия", "AZ": "Азербайджан",
+    "BS": "Багамы", "BH": "Бахрейн", "BD": "Бангладеш", "BB": "Барбадос",
+    "BY": "Беларусь", "BE": "Бельгия", "BZ": "Белиз", "BJ": "Бенин",
+    "BM": "Бермуды", "BT": "Бутан", "BO": "Боливия", "BA": "Босния и Герцеговина",
+    "BW": "Ботсвана", "BR": "Бразилия", "BN": "Бруней", "BG": "Болгария",
+    "BF": "Буркина-Фасо", "BI": "Бурунди",
+    "KH": "Камбоджа", "CM": "Камерун", "CA": "Канада", "CV": "Кабо-Верде",
+    "KY": "Каймановы острова", "CF": "ЦАР", "TD": "Чад", "CL": "Чили",
+    "CN": "Китай", "CO": "Колумбия", "KM": "Коморы", "CG": "Конго",
+    "CR": "Коста-Рика", "HR": "Хорватия", "CU": "Куба", "CY": "Кипр", "CZ": "Чехия",
+    "DK": "Дания", "DJ": "Джибути", "DM": "Доминика", "DO": "Доминиканская Республика",
+    "EC": "Эквадор", "EG": "Египет", "SV": "Сальвадор", "GQ": "Экваториальная Гвинея",
+    "ER": "Эритрея", "EE": "Эстония", "ET": "Эфиопия",
+    "FJ": "Фиджи", "FI": "Финляндия", "FR": "Франция",
+    "GA": "Габон", "GM": "Гамбия", "GE": "Грузия", "DE": "Германия", "GH": "Гана",
+    "GI": "Гибралтар", "GR": "Греция", "GL": "Гренландия", "GD": "Гренада",
+    "GU": "Гуам", "GT": "Гватемала", "GN": "Гвинея", "GW": "Гвинея-Бисау", "GY": "Гайана",
+    "HT": "Гаити", "HN": "Гондурас", "HK": "Гонконг", "HU": "Венгрия",
+    "IS": "Исландия", "IN": "Индия", "ID": "Индонезия", "IR": "Иран", "IQ": "Ирак",
+    "IE": "Ирландия", "IL": "Израиль", "IT": "Италия",
+    "JM": "Ямайка", "JP": "Япония", "JO": "Иордания",
+    "KZ": "Казахстан", "KE": "Кения", "KI": "Кирибати", "KP": "Северная Корея",
+    "KR": "Южная Корея", "KW": "Кувейт", "KG": "Кыргызстан",
+    "LA": "Лаос", "LV": "Латвия", "LB": "Ливан", "LS": "Лесото", "LR": "Либерия",
+    "LY": "Ливия", "LI": "Лихтенштейн", "LT": "Литва", "LU": "Люксембург",
+    "MO": "Макао", "MK": "Северная Македония", "MG": "Мадагаскар", "MW": "Малави",
+    "MY": "Малайзия", "MV": "Мальдивы", "ML": "Мали", "MT": "Мальта",
+    "MH": "Маршалловы острова", "MQ": "Мартиника", "MR": "Мавритания", "MU": "Маврикий",
+    "MX": "Мексика", "FM": "Микронезия", "MD": "Молдова", "MC": "Монако",
+    "MN": "Монголия", "ME": "Черногория", "MA": "Марокко", "MZ": "Мозамбик", "MM": "Мьянма",
+    "NA": "Намибия", "NR": "Науру", "NP": "Непал", "NL": "Нидерланды",
+    "NZ": "Новая Зеландия", "NI": "Никарагуа", "NE": "Нигер", "NG": "Нигерия", "NO": "Норвегия",
+    "OM": "Оман",
+    "PK": "Пакистан", "PW": "Палау", "PS": "Палестина", "PA": "Панама",
+    "PG": "Папуа — Новая Гвинея", "PY": "Парагвай", "PE": "Перу", "PH": "Филиппины",
+    "PL": "Польша", "PT": "Португалия", "PR": "Пуэрто-Рико",
+    "QA": "Катар",
+    "RO": "Румыния", "RU": "Россия", "RW": "Руанда",
+    "KN": "Сент-Китс и Невис", "LC": "Сент-Люсия", "VC": "Сент-Винсент и Гренадины",
+    "WS": "Самоа", "SM": "Сан-Марино", "ST": "Сан-Томе и Принсипи", "SA": "Саудовская Аравия",
+    "SN": "Сенегал", "RS": "Сербия", "SC": "Сейшелы", "SL": "Сьерра-Леоне", "SG": "Сингапур",
+    "SK": "Словакия", "SI": "Словения", "SB": "Соломоновы острова", "SO": "Сомали",
+    "ZA": "ЮАР", "ES": "Испания", "LK": "Шри-Ланка", "SD": "Судан", "SR": "Суринам",
+    "SZ": "Эсватини", "SE": "Швеция", "CH": "Швейцария", "SY": "Сирия",
+    "TW": "Тайвань", "TJ": "Таджикистан", "TZ": "Танзания", "TH": "Таиланд",
+    "TL": "Тимор-Лесте", "TG": "Того", "TO": "Тонга", "TT": "Тринидад и Тобаго",
+    "TN": "Тунис", "TR": "Турция", "TM": "Туркменистан", "TV": "Тувалу",
+    "UG": "Уганда", "UA": "Украина", "AE": "ОАЭ", "GB": "Великобритания", "US": "США",
+    "UY": "Уругвай", "UZ": "Узбекистан",
+    "VU": "Вануату", "VA": "Ватикан", "VE": "Венесуэла", "VN": "Вьетнам",
+    "YE": "Йемен",
+    "ZM": "Замбия", "ZW": "Зимбабве"
 }
-
 
 # =========================
 # PING
@@ -81,24 +98,17 @@ RU_COUNTRIES = {
 def get_ping(host, port):
     try:
         ip = socket.gethostbyname(host)
-
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         sock.settimeout(5)
-
         start = time.time()
         result = sock.connect_ex((ip, port))
         ping = int((time.time() - start) * 1000)
-
         sock.close()
-
         if result == 0:
             return ping
-
-    except Exception:
+    except:
         pass
-
     return None
-
 
 # =========================
 # COUNTRY
@@ -107,68 +117,116 @@ def get_ping(host, port):
 def get_country_info(host):
     try:
         ip = socket.gethostbyname(host)
-
-        r = requests.get(
-            f"https://ipwho.is/{ip}",
-            headers=HEADERS,
-            timeout=10
-        )
-
+        r = requests.get(f"https://ipwho.is/{ip}", headers=HEADERS, timeout=10)
         data = r.json()
-
         if not data.get("success"):
-            return None, None
-
+            return "UN", "Server"
         code = data.get("country_code")
-
         if not code:
-            return None, None
-
+            return "UN", "Server"
         if code in BANNED_COUNTRIES:
             return None, None
-
         return code, RU_COUNTRIES.get(code, code)
-
-    except Exception:
-        return None, None
-
+    except:
+        return "UN", "Server"
 
 # =========================
 # VLESS FILTER
 # =========================
 
-def is_valid_vless(url):
+def is_valid_vless(main_part: str) -> bool:
     try:
-        parsed = urlparse(url)
+        parsed = urlparse(main_part)
         qs = parse_qs(parsed.query)
-
-        transport = qs.get("type", [""])[0].lower()
-        security = qs.get("security", [""])[0].lower()
-
-        if transport != "tcp":
+        security = (qs.get("security", [""])[0] or "").lower()
+        transport = (qs.get("type", [""])[0] or "").lower()
+        allowed_transports = ["tcp"]
+        allowed_security = ["tls", "reality"]
+        if transport not in allowed_transports:
             return False
-
-        if security not in ["tls", "reality"]:
+        if security not in allowed_security:
             return False
-
         return True
-
-    except Exception:
+    except:
         return False
 
+# =========================
+# VLESS -> SING-BOX OUTBOUND
+# =========================
+
+def vless_to_outbound(main_part: str, tag: str):
+    try:
+        without_scheme = main_part[len("vless://"):]
+        if '@' not in without_scheme:
+            return None
+
+        uuid, rest = without_scheme.split('@', 1)
+
+        if '?' in rest:
+            hostport, query = rest.split('?', 1)
+        else:
+            hostport, query = rest, ''
+
+        if ':' in hostport:
+            host, port_str = hostport.rsplit(':', 1)
+            port = int(port_str)
+        else:
+            host, port = hostport, 443
+
+        qs = parse_qs(query)
+
+        def g(key, default=''):
+            return qs.get(key, [default])[0]
+
+        security = g('security', 'none').lower()
+        flow = g('flow', '')
+        sni = g('sni', host)
+        fp = g('fp', 'chrome')
+        pbk = g('pbk', '')
+        sid = g('sid', '')
+
+        outbound = {
+            "type": "vless",
+            "tag": tag,
+            "server": host,
+            "server_port": port,
+            "uuid": uuid,
+            "packet_encoding": "xudp",
+        }
+
+        if flow:
+            outbound["flow"] = flow
+
+        tls = {
+            "enabled": True,
+            "server_name": sni,
+            "utls": {"enabled": True, "fingerprint": fp or "chrome"},
+        }
+
+        if security == "reality":
+            tls["reality"] = {
+                "enabled": True,
+                "public_key": pbk,
+                "short_id": sid,
+            }
+
+        outbound["tls"] = tls
+        return outbound
+
+    except:
+        return None
 
 # =========================
-# PROCESS
+# PROCESS ONE KEY
 # =========================
 
 def process_key(key):
     try:
         key = key.strip()
-
         if not key:
             return None
 
-        main_part = key.split("#")[0]
+        main_part = key.split('#')[0]
 
         if not main_part.startswith("vless://"):
             return None
@@ -176,168 +234,155 @@ def process_key(key):
         if not is_valid_vless(main_part):
             return None
 
-        parsed = urlparse(main_part)
-
-        host = parsed.hostname
-        port = parsed.port or 443
-
-        if not host:
+        host_match = re.search(r'@([^:/?#\s]+):?(\d+)?', main_part)
+        if not host_match:
             return None
 
-        ping = get_ping(host, port)
+        host = host_match.group(1)
 
+        try:
+            port = int(host_match.group(2))
+        except:
+            port = 443
+
+        ping = get_ping(host, port)
         if ping is None:
             return None
 
         code, country = get_country_info(host)
-
         if not code:
             return None
 
-        emoji = "".join(
-            chr(127397 + ord(c))
-            for c in code
-        )
-
         return {
-            "config": main_part,
-            "country_code": code,
+            "main": main_part,
+            "code": code,
             "country": country,
-            "flag": emoji,
-            "ping": ping
+            "ping": ping,
         }
 
-    except Exception:
+    except:
         return None
 
+# =========================
+# BUILD SING-BOX CONFIG
+# =========================
+
+def build_singbox_config(results):
+    outbounds = []
+    tags = []
+
+    for idx, item in enumerate(results, 1):
+        tag = f"{item['country']} #{idx}"
+        outbound = vless_to_outbound(item["main"], tag)
+        if outbound is None:
+            continue
+        outbounds.append(outbound)
+        tags.append(tag)
+
+    urltest = {
+        "type": "urltest",
+        "tag": SELECTOR_TAG,
+        "outbounds": tags,
+        "url": "https://www.gstatic.com/generate_204",
+        "interval": "3m",
+        "tolerance": 50,
+    }
+
+    config = {
+        "log": {"level": "warning", "timestamp": True},
+        "dns": {
+            "servers": [
+                {"tag": "remote", "address": "https://1.1.1.1/dns-query"},
+                {"tag": "local", "address": "local", "detour": "direct"},
+            ],
+            "rules": [{"outbound": "any", "server": "local"}],
+        },
+        "inbounds": [
+            {
+                "type": "mixed",
+                "tag": "mixed-in",
+                "listen": "127.0.0.1",
+                "listen_port": 2080,
+            }
+        ],
+        "outbounds": outbounds + [
+            urltest,
+            {"type": "direct", "tag": "direct"},
+            {"type": "block", "tag": "block"},
+        ],
+        "route": {
+            "rules": [
+                {"protocol": "dns", "outbound": "direct"},
+            ],
+            "final": SELECTOR_TAG,
+            "auto_detect_interface": True,
+        },
+    }
+
+    return config
 
 # =========================
 # GITHUB
 # =========================
 
-def update_repo(content):
-    url = (
-        f"https://api.github.com/repos/"
-        f"{GH_USER}/{GH_REPO}/contents/{FILE_PATH}"
-    )
+def update_repo(content: str):
+    url = f"https://api.github.com/repos/{GITHUB_USER}/{REPO_NAME}/contents/{FILE_PATH}"
 
     headers = {
         "Authorization": f"token {TOKEN}",
-        "Accept": "application/vnd.github.v3+json"
+        "Accept": "application/vnd.github.v3+json",
     }
 
     sha = None
-
     try:
-        r = requests.get(url, headers=headers, timeout=15)
-
+        r = requests.get(url, headers=headers)
         if r.status_code == 200:
             sha = r.json().get("sha")
-
-    except Exception:
+    except:
         pass
 
-    encoded = base64.b64encode(
-        content.encode("utf-8")
-    ).decode()
+    encoded = base64.b64encode(content.encode()).decode()
 
     payload = {
-        "message": "Auto JSON VPN Update",
+        "message": f"Auto update {time.strftime('%H:%M:%S')}",
         "content": encoded,
-        "branch": "main"
+        "branch": "main",
     }
 
     if sha:
         payload["sha"] = sha
 
-    r = requests.put(
-        url,
-        headers=headers,
-        json=payload,
-        timeout=30
-    )
-
-    if r.status_code not in [200, 201]:
-        raise Exception(
-            f"GitHub error {r.status_code}: {r.text}"
-        )
-
+    requests.put(url, headers=headers, json=payload)
 
 # =========================
 # MAIN
 # =========================
 
 def run_once():
-
     all_keys = []
 
-    # Получаем источники
     for src in SOURCES:
         try:
-            r = requests.get(
-                src,
-                headers=HEADERS,
-                timeout=20
-            )
-
-            found = re.findall(
-                r"vless://[^\s]+",
-                r.text
-            )
-
+            r = requests.get(src, headers=HEADERS, timeout=15)
+            found = re.findall(r'vless://[^\s]+', r.text)
             all_keys.extend(found)
-
-        except Exception:
+        except:
             continue
 
-    # Убираем дубликаты
     unique_keys = list(set(all_keys))
 
-    print(f"Found: {len(unique_keys)} VLESS configs")
+    with ThreadPoolExecutor(max_workers=30) as ex:
+        results = list(filter(None, ex.map(process_key, unique_keys)))
 
-    # Проверяем сервера
-    with ThreadPoolExecutor(max_workers=30) as executor:
-        results = list(
-            filter(
-                None,
-                executor.map(
-                    process_key,
-                    unique_keys
-                )
-            )
-        )
-
-    # Сначала самые быстрые
-    results.sort(
-        key=lambda x: x["ping"]
-    )
-
-    # Лимит
+    results.sort(key=lambda x: x["ping"])
     results = results[:MAX_SERVERS]
 
-    # =========================
-    # ОДИН JSON-СЕРВЕР
-    # =========================
-
-    server = {
-        "name": "Халява ВПН | Auto 📡",
-        "type": "auto",
-        "updated": int(time.time()),
-        "servers": results
-    }
-
-    content = json.dumps(
-        server,
-        ensure_ascii=False,
-        indent=2
-    )
+    config = build_singbox_config(results)
+    content = json.dumps(config, ensure_ascii=False, indent=2)
 
     update_repo(content)
 
-    print(
-        f"DONE: {len(results)} configs"
-    )
-
+    print(f"DONE: {len(results)} servers packed into {SELECTOR_TAG}")
 
 if __name__ == "__main__":
     run_once()
