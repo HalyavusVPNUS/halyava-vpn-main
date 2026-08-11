@@ -12,9 +12,9 @@ from urllib.parse import urlparse, parse_qs
 # НАСТРОЙКИ
 # =========================
 
-GITHUB_USER = os.getenv("GH_USER")
-REPO_NAME = os.getenv("GH_REPO")
-TOKEN = os.getenv("GH_TOKEN6")
+GITHUB_USER = os.getenv("GH_USER24")
+REPO_NAME = os.getenv("GH_REPO24")
+TOKEN = os.getenv("GH_TOKEN24")
 
 FILE_PATH = "config.json"
 
