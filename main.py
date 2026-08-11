@@ -12,9 +12,9 @@ from urllib.parse import urlparse, parse_qs
 # НАСТРОЙКИ
 # =========================
 
-GITHUB_USER = os.getenv("GH_USER24")
-REPO_NAME = os.getenv("GH_REPO24")
-TOKEN = os.getenv("GH_TOKEN24")
+GITHUB_USER = os.getenv("GH_USER")
+REPO_NAME = os.getenv("GH_REPO")
+TOKEN = os.getenv("GH_TOKEN6")
 
 FILE_PATH = "config.json"
 
@@ -326,6 +326,12 @@ def build_singbox_config(results):
 # =========================
 
 def update_repo(content: str):
+    if not GITHUB_USER or not REPO_NAME or not TOKEN:
+        raise RuntimeError(
+            f"Не заданы секреты: GH_USER={bool(GITHUB_USER)}, "
+            f"GH_REPO={bool(REPO_NAME)}, GH_TOKEN6={bool(TOKEN)}"
+        )
+
     url = f"https://api.github.com/repos/{GITHUB_USER}/{REPO_NAME}/contents/{FILE_PATH}"
 
     headers = {
@@ -334,12 +340,13 @@ def update_repo(content: str):
     }
 
     sha = None
-    try:
-        r = requests.get(url, headers=headers)
-        if r.status_code == 200:
-            sha = r.json().get("sha")
-    except:
-        pass
+    r = requests.get(url, headers=headers)
+    print(f"GET {url} -> {r.status_code}")
+    if r.status_code == 200:
+        sha = r.json().get("sha")
+    elif r.status_code != 404:
+        # 404 нормально при первом запуске (файла ещё нет), всё остальное — проблема
+        print(r.text)
 
     encoded = base64.b64encode(content.encode()).decode()
 
@@ -352,7 +359,15 @@ def update_repo(content: str):
     if sha:
         payload["sha"] = sha
 
-    requests.put(url, headers=headers, json=payload)
+    put_r = requests.put(url, headers=headers, json=payload)
+    print(f"PUT {url} -> {put_r.status_code}")
+
+    if put_r.status_code not in (200, 201):
+        print(put_r.text)
+        raise RuntimeError(
+            f"Не удалось записать {FILE_PATH} в репозиторий: "
+            f"{put_r.status_code} {put_r.text}"
+        )
 
 # =========================
 # MAIN
