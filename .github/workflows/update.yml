@@ -23,7 +23,7 @@ jobs:
 
       - name: Run script
         env:
-          GH_USER: ${{ secrets.GH_USER24 }}
-          GH_REPO: ${{ secrets.GH_REPO24 }}
-          GH_TOKEN6: ${{ secrets.GH_TOKEN24 }}
+          GH_USER24: ${{ secrets.GH_USER24 }}
+          GH_REPO24: ${{ secrets.GH_REPO24 }}
+          GH_TOKEN24: ${{ secrets.GH_TOKEN24 }}
         run: python main.py
