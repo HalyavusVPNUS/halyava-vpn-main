@@ -27,22 +27,24 @@ BANNED_COUNTRIES = ['RU', 'CN', 'KP', 'IR']
 HEADERS = {"User-Agent": "Mozilla/5.0"}
 
 SELECTOR_NAME = "🇪🇺 АВТОВЫБОР | WI-FI"
-MAX_SERVERS = 50  # сколько лучших серверов класть в баланс-группу
+MAX_SERVERS = 50
 
 # =========================
 # ПРОФИЛЬ ИНФОРМАЦИЯ
 # =========================
 
 PROFILE_INFO = {
-    "profile_title": "Халява ВПН | Main 📡",
-    "profile_update_interval": 1,
-    "subscription_userinfo": "expire=2556326400; total=10995116277760; used=0",
-    "profile_web_page_url": "https://t.me/halyava_vpnz",
+    "title": "Халява ВПН | Main 📡",
+    "update_interval": 1,
+    "expire": 2556326400,  # 10.12.2050
+    "total": 10995116277760,
+    "used": 0,
+    "web_page": "https://t.me/halyava_vpnz",
     "announce": "Автовыборная подписка, из Mini VPN-подписки) @halyava_vpnz"
 }
 
 # =========================
-# СТРАНЫ (для тегов отдельных outbound'ов)
+# СТРАНЫ
 # =========================
 
 RU_COUNTRIES = {
@@ -164,7 +166,6 @@ def is_valid_vless(main_part: str) -> bool:
 
 # =========================
 # VLESS -> XRAY-CORE OUTBOUND
-# (формат, который напрямую понимают Happ и v2RayTun)
 # =========================
 
 def vless_to_xray_outbound(main_part: str, tag: str):
@@ -244,7 +245,7 @@ def vless_to_xray_outbound(main_part: str, tag: str):
         return None
 
 # =========================
-# BUILD XRAY-CORE CONFIG с ПРОФИЛЕМ
+# BUILD XRAY-CORE CONFIG
 # =========================
 
 def build_xray_config(results):
@@ -263,17 +264,8 @@ def build_xray_config(results):
     outbounds.append({"tag": "block", "protocol": "blackhole"})
 
     config = {
-        # ПРОФИЛЬ ИНФОРМАЦИЯ
-        "#profile-title": PROFILE_INFO["profile_title"],
-        "#profile-update-interval": PROFILE_INFO["profile_update_interval"],
-        "#subscription-userinfo": PROFILE_INFO["subscription_userinfo"],
-        "#profile-web-page-url": PROFILE_INFO["profile_web_page_url"],
-        "#announce": PROFILE_INFO["announce"],
-
-        # Имя/описание конфига
         "remarks": SELECTOR_NAME,
         "ps": SELECTOR_NAME,
-        "meta": {"serverDescription": SELECTOR_NAME},
 
         "log": {"loglevel": "warning"},
 
@@ -299,7 +291,6 @@ def build_xray_config(results):
 
         "outbounds": outbounds,
 
-        # Наблюдатель, который постоянно пингует все proxy-* и знает, кто быстрее
         "observatory": {
             "subjectSelector": ["proxy-"],
             "probeUrl": "https://www.gstatic.com/generate_204",
@@ -327,6 +318,27 @@ def build_xray_config(results):
     }
 
     return config
+
+# =========================
+# BUILD PROFILE WITH METADATA
+# =========================
+
+def build_profile_content(config):
+    """Генерирует контент с метаданными профиля и конфигом"""
+    
+    # Строим хедер с метаданными профиля
+    metadata = f"""#profile-title: {PROFILE_INFO['title']}
+#profile-update-interval: {PROFILE_INFO['update_interval']}
+#subscription-userinfo: expire={PROFILE_INFO['expire']}; total={PROFILE_INFO['total']}; used={PROFILE_INFO['used']}
+#profile-web-page-url: {PROFILE_INFO['web_page']}
+#announce: {PROFILE_INFO['announce']}
+"""
+    
+    # JSON конфиг
+    config_json = json.dumps(config, ensure_ascii=False, indent=2)
+    
+    # Объединяем
+    return metadata + config_json
 
 # =========================
 # GITHUB
@@ -376,36 +388,6 @@ def update_repo(content: str):
         )
 
 # =========================
-# MAIN
-# =========================
-
-def run_once():
-    all_keys = []
-
-    for src in SOURCES:
-        try:
-            r = requests.get(src, headers=HEADERS, timeout=15)
-            found = re.findall(r'vless://[^\s]+', r.text)
-            all_keys.extend(found)
-        except:
-            continue
-
-    unique_keys = list(set(all_keys))
-
-    with ThreadPoolExecutor(max_workers=30) as ex:
-        results = list(filter(None, ex.map(process_key, unique_keys)))
-
-    results.sort(key=lambda x: x["ping"])
-    results = results[:MAX_SERVERS]
-
-    config = build_xray_config(results)
-    content = json.dumps(config, ensure_ascii=False, indent=2)
-
-    update_repo(content)
-
-    print(f"DONE: {len(results)} серверов упаковано в '{SELECTOR_NAME}'")
-
-# =========================
 # PROCESS ONE KEY
 # =========================
 
@@ -451,6 +433,49 @@ def process_key(key):
 
     except:
         return None
+
+# =========================
+# MAIN
+# =========================
+
+def run_once():
+    print("🚀 Запуск сборки конфига...")
+    
+    all_keys = []
+
+    for src in SOURCES:
+        try:
+            print(f"📥 Загрузка из {src}...")
+            r = requests.get(src, headers=HEADERS, timeout=15)
+            found = re.findall(r'vless://[^\s]+', r.text)
+            all_keys.extend(found)
+            print(f"   Найдено {len(found)} ключей")
+        except Exception as e:
+            print(f"   Ошибка: {e}")
+            continue
+
+    unique_keys = list(set(all_keys))
+    print(f"📊 Уникальных ключей: {len(unique_keys)}")
+
+    print(f"⏱️  Проверка ключей (параллельно)...")
+    with ThreadPoolExecutor(max_workers=30) as ex:
+        results = list(filter(None, ex.map(process_key, unique_keys)))
+
+    print(f"✅ Валидных серверов: {len(results)}")
+
+    results.sort(key=lambda x: x["ping"])
+    results = results[:MAX_SERVERS]
+
+    print(f"🎯 Топ {len(results)} серверов по пингу")
+
+    config = build_xray_config(results)
+    content = build_profile_content(config)
+
+    print(f"📤 Загрузка на GitHub...")
+    update_repo(content)
+
+    print(f"✨ ГОТОВО! {len(results)} серверов упаковано в '{SELECTOR_NAME}'")
+    print(f"📋 Файл: {FILE_PATH}")
 
 if __name__ == "__main__":
     run_once()
