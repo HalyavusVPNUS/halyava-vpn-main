@@ -1,9 +1,8 @@
-name: Main VPN JSON Update
+name: Main VPN Update
 
 on:
   schedule:
-    - cron: "0 * * * *"
-
+    - cron: "0 */1 * * *"
   workflow_dispatch:
 
 jobs:
