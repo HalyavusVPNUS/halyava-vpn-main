@@ -26,8 +26,8 @@ BANNED_COUNTRIES = ['RU', 'CN', 'KP', 'IR']
 
 HEADERS = {"User-Agent": "Mozilla/5.0"}
 
-SELECTOR_TAG = "🇪🇺 АВТОВЫБОР | WI-FI"
-MAX_SERVERS = 50  # сколько лучших серверов класть в urltest-группу
+SELECTOR_NAME = "🇪🇺 АВТОВЫБОР | WI-FI"
+MAX_SERVERS = 50  # сколько лучших серверов класть в баланс-группу
 
 # =========================
 # СТРАНЫ (для тегов отдельных outbound'ов)
@@ -151,10 +151,11 @@ def is_valid_vless(main_part: str) -> bool:
         return False
 
 # =========================
-# VLESS -> SING-BOX OUTBOUND
+# VLESS -> XRAY-CORE OUTBOUND
+# (формат, который напрямую понимают Happ и v2RayTun)
 # =========================
 
-def vless_to_outbound(main_part: str, tag: str):
+def vless_to_xray_outbound(main_part: str, tag: str):
     try:
         without_scheme = main_part[len("vless://"):]
         if '@' not in without_scheme:
@@ -181,36 +182,50 @@ def vless_to_outbound(main_part: str, tag: str):
         security = g('security', 'none').lower()
         flow = g('flow', '')
         sni = g('sni', host)
-        fp = g('fp', 'chrome')
+        fp = g('fp', 'chrome') or 'chrome'
         pbk = g('pbk', '')
         sid = g('sid', '')
 
-        outbound = {
-            "type": "vless",
-            "tag": tag,
-            "server": host,
-            "server_port": port,
-            "uuid": uuid,
-            "packet_encoding": "xudp",
+        user = {
+            "id": uuid,
+            "encryption": "none",
         }
-
         if flow:
-            outbound["flow"] = flow
+            user["flow"] = flow
 
-        tls = {
-            "enabled": True,
-            "server_name": sni,
-            "utls": {"enabled": True, "fingerprint": fp or "chrome"},
+        outbound = {
+            "tag": tag,
+            "protocol": "vless",
+            "settings": {
+                "vnext": [
+                    {
+                        "address": host,
+                        "port": port,
+                        "users": [user],
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "tcp",
+                "security": security,
+            },
         }
 
         if security == "reality":
-            tls["reality"] = {
-                "enabled": True,
-                "public_key": pbk,
-                "short_id": sid,
+            outbound["streamSettings"]["realitySettings"] = {
+                "serverName": sni,
+                "fingerprint": fp,
+                "publicKey": pbk,
+                "shortId": sid,
+                "spiderX": "",
+            }
+        elif security == "tls":
+            outbound["streamSettings"]["tlsSettings"] = {
+                "serverName": sni,
+                "fingerprint": fp,
+                "allowInsecure": False,
             }
 
-        outbound["tls"] = tls
         return outbound
 
     except:
@@ -264,58 +279,78 @@ def process_key(key):
         return None
 
 # =========================
-# BUILD SING-BOX CONFIG
+# BUILD XRAY-CORE CONFIG
 # =========================
 
-def build_singbox_config(results):
+def build_xray_config(results):
     outbounds = []
-    tags = []
+    proxy_tags = []
 
     for idx, item in enumerate(results, 1):
-        tag = f"{item['country']} #{idx}"
-        outbound = vless_to_outbound(item["main"], tag)
+        tag = f"proxy-{idx}"
+        outbound = vless_to_xray_outbound(item["main"], tag)
         if outbound is None:
             continue
         outbounds.append(outbound)
-        tags.append(tag)
+        proxy_tags.append(tag)
 
-    urltest = {
-        "type": "urltest",
-        "tag": SELECTOR_TAG,
-        "outbounds": tags,
-        "url": "https://www.gstatic.com/generate_204",
-        "interval": "3m",
-        "tolerance": 50,
-    }
+    outbounds.append({"tag": "direct", "protocol": "freedom"})
+    outbounds.append({"tag": "block", "protocol": "blackhole"})
 
     config = {
-        "log": {"level": "warning", "timestamp": True},
+        # Имя/описание конфига — так его подпишет Happ при импорте по URL
+        "remarks": SELECTOR_NAME,
+        "ps": SELECTOR_NAME,
+        "meta": {"serverDescription": SELECTOR_NAME},
+
+        "log": {"loglevel": "warning"},
+
         "dns": {
-            "servers": [
-                {"tag": "remote", "address": "https://1.1.1.1/dns-query"},
-                {"tag": "local", "address": "local", "detour": "direct"},
-            ],
-            "rules": [{"outbound": "any", "server": "local"}],
+            "servers": ["https://1.1.1.1/dns-query", "localhost"]
         },
+
         "inbounds": [
             {
-                "type": "mixed",
-                "tag": "mixed-in",
+                "tag": "socks-in",
+                "port": 10808,
                 "listen": "127.0.0.1",
-                "listen_port": 2080,
-            }
+                "protocol": "socks",
+                "settings": {"udp": True},
+            },
+            {
+                "tag": "http-in",
+                "port": 10809,
+                "listen": "127.0.0.1",
+                "protocol": "http",
+            },
         ],
-        "outbounds": outbounds + [
-            urltest,
-            {"type": "direct", "tag": "direct"},
-            {"type": "block", "tag": "block"},
-        ],
-        "route": {
-            "rules": [
-                {"protocol": "dns", "outbound": "direct"},
+
+        "outbounds": outbounds,
+
+        # Наблюдатель, который постоянно пингует все proxy-* и знает, кто быстрее
+        "observatory": {
+            "subjectSelector": ["proxy-"],
+            "probeUrl": "https://www.gstatic.com/generate_204",
+            "probeInterval": "60s",
+            "enableConcurrency": True,
+        },
+
+        "routing": {
+            "domainStrategy": "AsIs",
+            "balancers": [
+                {
+                    "tag": "auto",
+                    "selector": ["proxy-"],
+                    "strategy": {"type": "leastPing"},
+                }
             ],
-            "final": SELECTOR_TAG,
-            "auto_detect_interface": True,
+            "rules": [
+                {
+                    "type": "field",
+                    "network": "tcp,udp",
+                    "balancerTag": "auto",
+                }
+            ],
         },
     }
 
@@ -345,7 +380,6 @@ def update_repo(content: str):
     if r.status_code == 200:
         sha = r.json().get("sha")
     elif r.status_code != 404:
-        # 404 нормально при первом запуске (файла ещё нет), всё остальное — проблема
         print(r.text)
 
     encoded = base64.b64encode(content.encode()).decode()
@@ -392,12 +426,12 @@ def run_once():
     results.sort(key=lambda x: x["ping"])
     results = results[:MAX_SERVERS]
 
-    config = build_singbox_config(results)
+    config = build_xray_config(results)
     content = json.dumps(config, ensure_ascii=False, indent=2)
 
     update_repo(content)
 
-    print(f"DONE: {len(results)} servers packed into {SELECTOR_TAG}")
+    print(f"DONE: {len(results)} servers packed into '{SELECTOR_NAME}'")
 
 if __name__ == "__main__":
     run_once()
