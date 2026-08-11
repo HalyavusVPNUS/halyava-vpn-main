@@ -16,7 +16,7 @@ GITHUB_USER = os.getenv("GH_USER24")
 REPO_NAME = os.getenv("GH_REPO24")
 TOKEN = os.getenv("GH_TOKEN24")
 
-FILE_PATH = "config.json"
+FILE_PATH = "main.txt"
 
 SOURCES = [
     "https://raw.githubusercontent.com/ShadowException/VPN/refs/heads/main/configs/VPN-cat"
@@ -28,6 +28,18 @@ HEADERS = {"User-Agent": "Mozilla/5.0"}
 
 SELECTOR_NAME = "🇪🇺 АВТОВЫБОР | WI-FI"
 MAX_SERVERS = 50  # сколько лучших серверов класть в баланс-группу
+
+# =========================
+# ПРОФИЛЬ ИНФОРМАЦИЯ
+# =========================
+
+PROFILE_INFO = {
+    "profile_title": "Халява ВПН | Main 📡",
+    "profile_update_interval": 1,
+    "subscription_userinfo": "expire=2556326400; total=10995116277760; used=0",
+    "profile_web_page_url": "https://t.me/halyava_vpnz",
+    "announce": "Автовыборная подписка, из Mini VPN-подписки) @halyava_vpnz"
+}
 
 # =========================
 # СТРАНЫ (для тегов отдельных outbound'ов)
@@ -232,54 +244,7 @@ def vless_to_xray_outbound(main_part: str, tag: str):
         return None
 
 # =========================
-# PROCESS ONE KEY
-# =========================
-
-def process_key(key):
-    try:
-        key = key.strip()
-        if not key:
-            return None
-
-        main_part = key.split('#')[0]
-
-        if not main_part.startswith("vless://"):
-            return None
-
-        if not is_valid_vless(main_part):
-            return None
-
-        host_match = re.search(r'@([^:/?#\s]+):?(\d+)?', main_part)
-        if not host_match:
-            return None
-
-        host = host_match.group(1)
-
-        try:
-            port = int(host_match.group(2))
-        except:
-            port = 443
-
-        ping = get_ping(host, port)
-        if ping is None:
-            return None
-
-        code, country = get_country_info(host)
-        if not code:
-            return None
-
-        return {
-            "main": main_part,
-            "code": code,
-            "country": country,
-            "ping": ping,
-        }
-
-    except:
-        return None
-
-# =========================
-# BUILD XRAY-CORE CONFIG
+# BUILD XRAY-CORE CONFIG с ПРОФИЛЕМ
 # =========================
 
 def build_xray_config(results):
@@ -298,7 +263,14 @@ def build_xray_config(results):
     outbounds.append({"tag": "block", "protocol": "blackhole"})
 
     config = {
-        # Имя/описание конфига — так его подпишет Happ при импорте по URL
+        # ПРОФИЛЬ ИНФОРМАЦИЯ
+        "#profile-title": PROFILE_INFO["profile_title"],
+        "#profile-update-interval": PROFILE_INFO["profile_update_interval"],
+        "#subscription-userinfo": PROFILE_INFO["subscription_userinfo"],
+        "#profile-web-page-url": PROFILE_INFO["profile_web_page_url"],
+        "#announce": PROFILE_INFO["announce"],
+
+        # Имя/описание конфига
         "remarks": SELECTOR_NAME,
         "ps": SELECTOR_NAME,
         "meta": {"serverDescription": SELECTOR_NAME},
@@ -364,7 +336,7 @@ def update_repo(content: str):
     if not GITHUB_USER or not REPO_NAME or not TOKEN:
         raise RuntimeError(
             f"Не заданы секреты: GH_USER={bool(GITHUB_USER)}, "
-            f"GH_REPO={bool(REPO_NAME)}, GH_TOKEN6={bool(TOKEN)}"
+            f"GH_REPO={bool(REPO_NAME)}, GH_TOKEN={bool(TOKEN)}"
         )
 
     url = f"https://api.github.com/repos/{GITHUB_USER}/{REPO_NAME}/contents/{FILE_PATH}"
@@ -431,7 +403,54 @@ def run_once():
 
     update_repo(content)
 
-    print(f"DONE: {len(results)} servers packed into '{SELECTOR_NAME}'")
+    print(f"DONE: {len(results)} серверов упаковано в '{SELECTOR_NAME}'")
+
+# =========================
+# PROCESS ONE KEY
+# =========================
+
+def process_key(key):
+    try:
+        key = key.strip()
+        if not key:
+            return None
+
+        main_part = key.split('#')[0]
+
+        if not main_part.startswith("vless://"):
+            return None
+
+        if not is_valid_vless(main_part):
+            return None
+
+        host_match = re.search(r'@([^:/?#\s]+):?(\d+)?', main_part)
+        if not host_match:
+            return None
+
+        host = host_match.group(1)
+
+        try:
+            port = int(host_match.group(2))
+        except:
+            port = 443
+
+        ping = get_ping(host, port)
+        if ping is None:
+            return None
+
+        code, country = get_country_info(host)
+        if not code:
+            return None
+
+        return {
+            "main": main_part,
+            "code": code,
+            "country": country,
+            "ping": ping,
+        }
+
+    except:
+        return None
 
 if __name__ == "__main__":
     run_once()
