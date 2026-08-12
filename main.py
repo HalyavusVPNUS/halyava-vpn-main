@@ -19,7 +19,7 @@ TOKEN = os.getenv("GH_TOKEN24")
 FILE_PATH = "main.txt"
 
 SOURCES = [
-    "https://raw.githubusercontent.com/ShadowException/VPN/refs/heads/main/configs/VPN-cat"
+    "https://raw.githubusercontent.com/HalyavusVPNUS/halyava-vpn-mini/refs/heads/main/mini.txt"
 ]
 
 BANNED_COUNTRIES = ['RU', 'CN', 'KP', 'IR']
