@@ -37,11 +37,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "test.spectrum.vu",
-            "port": 443,
+            "address": "147.182.212.232",
+            "port": 56565,
             "users": [
               {
-                "id": "4bc7d558-1943-44de-bd82-56920bc9383e",
+                "id": "7b188eea-b08f-42c2-bac7-d3b0e74218b8",
                 "encryption": "none",
                 "flow": "xtls-rprx-vision"
               }
@@ -53,10 +53,40 @@
         "network": "tcp",
         "security": "reality",
         "realitySettings": {
-          "serverName": "test.spectrum.vu",
+          "serverName": "www.paypal.com",
           "fingerprint": "chrome",
-          "publicKey": "EyzTSZxq5qlUT2xW0l7VP-DzIh2ucabMan9ekEv9Owo",
+          "publicKey": "Td03Ae-cuYLq4xg7MSps58c_yRUcbbwtZLXm0ywabjY",
           "shortId": "",
+          "spiderX": ""
+        }
+      }
+    },
+    {
+      "tag": "proxy-2",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "66.175.217.170",
+            "port": 443,
+            "users": [
+              {
+                "id": "b98d4c6e-6770-4a31-8256-a4750cdea0e7",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "www.amazon.com",
+          "fingerprint": "chrome",
+          "publicKey": "0i_xAxYgSNx5NMpK2lOaWGS-CvAiD_LneYPO0MF0owo",
+          "shortId": "1a",
           "spiderX": ""
         }
       }
@@ -67,11 +97,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "152.70.58.201",
+            "address": "31.56.184.133",
             "port": 443,
             "users": [
               {
-                "id": "8892e34a-339b-4526-b88d-cf68c516231c",
+                "id": "176bc48c-460b-4260-abbd-68fd5ea85270",
                 "encryption": "none",
                 "flow": "xtls-rprx-vision"
               }
@@ -83,66 +113,10 @@
         "network": "tcp",
         "security": "reality",
         "realitySettings": {
-          "serverName": "www.nvidia.com",
-          "fingerprint": "chrome",
-          "publicKey": "Hg_ivwbClYmR-SEHdoGgq4yEk6ltbjS5c4yiQRa4_28",
-          "shortId": "52c723e0fad49689",
-          "spiderX": ""
-        }
-      }
-    },
-    {
-      "tag": "proxy-4",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "fr.1323.world",
-            "port": 443,
-            "users": [
-              {
-                "id": "0e90f352-e9bc-4834-8ff6-49ba887eded4",
-                "encryption": "none"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "b12a6eea4807ca4e.1323.world",
-          "fingerprint": "chrome",
-          "allowInsecure": false
-        }
-      }
-    },
-    {
-      "tag": "proxy-5",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "46.250.240.80",
-            "port": 2053,
-            "users": [
-              {
-                "id": "5c53b9e9-fbe8-4c50-a623-73cdafa3886b",
-                "encryption": "none"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "www.cloudflare.com",
-          "fingerprint": "chrome",
-          "publicKey": "cevjPz2GmTrXDFXQbGizdN6t4c6m11kclJEf5nOHOTE",
-          "shortId": "52dfc493bb6b6c16",
+          "serverName": "nll.mcqueenconnection.ru",
+          "fingerprint": "firefox",
+          "publicKey": "O2ttHpVFmwoAf-E1rHgOlv7NggcwxcWkHHen7jkIBjY",
+          "shortId": "a8e8df4f1fb3e3f8",
           "spiderX": ""
         }
       }
