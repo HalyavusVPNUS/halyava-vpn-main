@@ -37,36 +37,6 @@
       "settings": {
         "vnext": [
           {
-            "address": "147.182.212.232",
-            "port": 56565,
-            "users": [
-              {
-                "id": "7b188eea-b08f-42c2-bac7-d3b0e74218b8",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "www.paypal.com",
-          "fingerprint": "chrome",
-          "publicKey": "Td03Ae-cuYLq4xg7MSps58c_yRUcbbwtZLXm0ywabjY",
-          "shortId": "",
-          "spiderX": ""
-        }
-      }
-    },
-    {
-      "tag": "proxy-2",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
             "address": "66.175.217.170",
             "port": 443,
             "users": [
@@ -87,6 +57,36 @@
           "fingerprint": "chrome",
           "publicKey": "0i_xAxYgSNx5NMpK2lOaWGS-CvAiD_LneYPO0MF0owo",
           "shortId": "1a",
+          "spiderX": ""
+        }
+      }
+    },
+    {
+      "tag": "proxy-2",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "147.182.212.232",
+            "port": 56565,
+            "users": [
+              {
+                "id": "7b188eea-b08f-42c2-bac7-d3b0e74218b8",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "www.paypal.com",
+          "fingerprint": "chrome",
+          "publicKey": "Td03Ae-cuYLq4xg7MSps58c_yRUcbbwtZLXm0ywabjY",
+          "shortId": "",
           "spiderX": ""
         }
       }
