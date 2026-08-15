@@ -67,7 +67,7 @@
       "settings": {
         "vnext": [
           {
-            "address": "85.155.226.27",
+            "address": "85.155.226.84",
             "port": 443,
             "users": [
               {
@@ -84,7 +84,7 @@
         "security": "reality",
         "realitySettings": {
           "serverName": "getsavesafe.net",
-          "fingerprint": "chrome",
+          "fingerprint": "safari",
           "publicKey": "5Z6PwoPSNBLPIsX8lZtHM7-Y-psMMR1vz5Pit0EVISs",
           "shortId": "82f5d3a1e9c0b661",
           "spiderX": ""
@@ -97,11 +97,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "85.155.226.27",
+            "address": "132.145.89.30",
             "port": 443,
             "users": [
               {
-                "id": "39c42b0a-b823-4c93-bb99-74b4183e518d",
+                "id": "e6d8d743-a9bc-48c9-be99-8f3cc94d16e1",
                 "encryption": "none",
                 "flow": "xtls-rprx-vision"
               }
@@ -111,133 +111,11 @@
       },
       "streamSettings": {
         "network": "tcp",
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "getsavesafe.net",
-          "fingerprint": "qq",
-          "publicKey": "5Z6PwoPSNBLPIsX8lZtHM7-Y-psMMR1vz5Pit0EVISs",
-          "shortId": "82f5d3a1e9c0b661",
-          "spiderX": ""
-        }
-      }
-    },
-    {
-      "tag": "proxy-4",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "85.155.226.140",
-            "port": 443,
-            "users": [
-              {
-                "id": "39c42b0a-b823-4c93-bb99-74b4183e518d",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "getsavesafe.net",
-          "fingerprint": "qq",
-          "publicKey": "5Z6PwoPSNBLPIsX8lZtHM7-Y-psMMR1vz5Pit0EVISs",
-          "shortId": "82f5d3a1e9c0b661",
-          "spiderX": ""
-        }
-      }
-    },
-    {
-      "tag": "proxy-5",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "85.155.226.84",
-            "port": 443,
-            "users": [
-              {
-                "id": "39c42b0a-b823-4c93-bb99-74b4183e518d",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "getsavesafe.net",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "ako.pagate.top",
           "fingerprint": "firefox",
-          "publicKey": "5Z6PwoPSNBLPIsX8lZtHM7-Y-psMMR1vz5Pit0EVISs",
-          "shortId": "82f5d3a1e9c0b661",
-          "spiderX": ""
-        }
-      }
-    },
-    {
-      "tag": "proxy-6",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "85.155.226.84",
-            "port": 443,
-            "users": [
-              {
-                "id": "39c42b0a-b823-4c93-bb99-74b4183e518d",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "getsavesafe.net",
-          "fingerprint": "ios",
-          "publicKey": "5Z6PwoPSNBLPIsX8lZtHM7-Y-psMMR1vz5Pit0EVISs",
-          "shortId": "82f5d3a1e9c0b661",
-          "spiderX": ""
-        }
-      }
-    },
-    {
-      "tag": "proxy-7",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "bossnia.netotcluchai.top",
-            "port": 1443,
-            "users": [
-              {
-                "id": "27dcb3a9-c82d-4628-a8c4-bae39e6cb4f4",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "bossnia.netotcluchai.top",
-          "fingerprint": "edge",
-          "publicKey": "aS94augCCytcbHRn37QNUfrBwAM2cp2RIXFL97yr50o",
-          "shortId": "0441f3e34348cb45",
-          "spiderX": ""
+          "allowInsecure": false
         }
       }
     },
