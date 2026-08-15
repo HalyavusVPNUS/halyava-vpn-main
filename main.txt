@@ -37,11 +37,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "147.182.212.232",
-            "port": 56565,
+            "address": "3.39.4.109",
+            "port": 13672,
             "users": [
               {
-                "id": "7b188eea-b08f-42c2-bac7-d3b0e74218b8",
+                "id": "814bd064-544d-4255-a070-5705c03f6da9",
                 "encryption": "none",
                 "flow": "xtls-rprx-vision"
               }
@@ -53,10 +53,10 @@
         "network": "tcp",
         "security": "reality",
         "realitySettings": {
-          "serverName": "www.paypal.com",
+          "serverName": "www.apple.com",
           "fingerprint": "chrome",
-          "publicKey": "Td03Ae-cuYLq4xg7MSps58c_yRUcbbwtZLXm0ywabjY",
-          "shortId": "",
+          "publicKey": "k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0",
+          "shortId": "48050fab",
           "spiderX": ""
         }
       }
@@ -67,13 +67,12 @@
       "settings": {
         "vnext": [
           {
-            "address": "85.155.226.75",
+            "address": "38.244.137.198",
             "port": 443,
             "users": [
               {
-                "id": "39c42b0a-b823-4c93-bb99-74b4183e518d",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
+                "id": "09748875-9da3-440e-9809-9752e1dda1e4",
+                "encryption": "none"
               }
             ]
           }
@@ -83,10 +82,10 @@
         "network": "tcp",
         "security": "reality",
         "realitySettings": {
-          "serverName": "getsavesafe.net",
-          "fingerprint": "firefox",
-          "publicKey": "5Z6PwoPSNBLPIsX8lZtHM7-Y-psMMR1vz5Pit0EVISs",
-          "shortId": "82f5d3a1e9c0b661",
+          "serverName": "google.com",
+          "fingerprint": "chrome",
+          "publicKey": "QXGsw1KqljvUiarkvFdBs3T1TeUQq4skwHFlsmbj31o",
+          "shortId": "365c07ed",
           "spiderX": ""
         }
       }
@@ -97,11 +96,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "unas.denegnet.cc",
-            "port": 443,
+            "address": "3.0.111.82",
+            "port": 10574,
             "users": [
               {
-                "id": "27dcb3a9-c82d-4628-a8c4-bae39e6cb4f4",
+                "id": "814bd064-544d-4255-a070-5705c03f6da9",
                 "encryption": "none",
                 "flow": "xtls-rprx-vision"
               }
@@ -113,10 +112,10 @@
         "network": "tcp",
         "security": "reality",
         "realitySettings": {
-          "serverName": "unas.denegnet.cc",
-          "fingerprint": "edge",
-          "publicKey": "RP93KQEzBP7wvvhwYy5c87IiQbV6xnsx7XgJpajevTA",
-          "shortId": "bc599ecdd54c1b3f",
+          "serverName": "www.apple.com",
+          "fingerprint": "chrome",
+          "publicKey": "k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0",
+          "shortId": "48050fab",
           "spiderX": ""
         }
       }
@@ -127,11 +126,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "31.14.41.161",
-            "port": 443,
+            "address": "3.0.111.82",
+            "port": 17623,
             "users": [
               {
-                "id": "27dcb3a9-c82d-4628-a8c4-bae39e6cb4f4",
+                "id": "814bd064-544d-4255-a070-5705c03f6da9",
                 "encryption": "none",
                 "flow": "xtls-rprx-vision"
               }
@@ -143,40 +142,10 @@
         "network": "tcp",
         "security": "reality",
         "realitySettings": {
-          "serverName": "buhalvrome.denegnet.cc",
+          "serverName": "www.apple.com",
           "fingerprint": "firefox",
-          "publicKey": "BZHYuWJM1Bm6Cqi806nq_cbTmdvANv5-8AlA2ex4NUA",
-          "shortId": "a88382ffbc59c48a",
-          "spiderX": ""
-        }
-      }
-    },
-    {
-      "tag": "proxy-5",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "88.119.176.146",
-            "port": 443,
-            "users": [
-              {
-                "id": "27dcb3a9-c82d-4628-a8c4-bae39e6cb4f4",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "unas.denegnet.cc",
-          "fingerprint": "firefox",
-          "publicKey": "RP93KQEzBP7wvvhwYy5c87IiQbV6xnsx7XgJpajevTA",
-          "shortId": "bc599ecdd54c1b3f",
+          "publicKey": "k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0",
+          "shortId": "48050fab",
           "spiderX": ""
         }
       }
