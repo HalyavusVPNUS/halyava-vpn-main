@@ -37,11 +37,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "72.35.246.31",
-            "port": 1244,
+            "address": "45.147.251.25",
+            "port": 443,
             "users": [
               {
-                "id": "2d96d4d6-a276-4ab5-9f20-8dc5cbf6e902",
+                "id": "423b1d79-08c4-403f-9d5e-c541f791b55f",
                 "encryption": "none",
                 "flow": "xtls-rprx-vision"
               }
@@ -53,10 +53,10 @@
         "network": "tcp",
         "security": "reality",
         "realitySettings": {
-          "serverName": "axisvpn.ru",
-          "fingerprint": "qq",
-          "publicKey": "gHG_cbbi-OJKY2tBQTqz1QryfmmRZEQ7BQgymimukkQ",
-          "shortId": "6ba85179e30d4fc2",
+          "serverName": "eu-west.cendora.ru",
+          "fingerprint": "firefox",
+          "publicKey": "m6RDw1b8R4lCaRUIzhHpy6TtX2Dhk6nyby8dWzeQqA0",
+          "shortId": "dd3ff38418d29d22",
           "spiderX": ""
         }
       }
@@ -67,13 +67,12 @@
       "settings": {
         "vnext": [
           {
-            "address": "185.221.163.211",
-            "port": 443,
+            "address": "86.107.178.66",
+            "port": 448,
             "users": [
               {
-                "id": "9aff0732-7ce4-4b34-ba20-e67c6df64fdd",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
+                "id": "b3eed393-e990-40a0-978c-689d40be9da4",
+                "encryption": "none"
               }
             ]
           }
@@ -83,10 +82,10 @@
         "network": "tcp",
         "security": "reality",
         "realitySettings": {
-          "serverName": "fin1.panel11.ru",
+          "serverName": "www.samsung.com",
           "fingerprint": "firefox",
-          "publicKey": "lQ8pnlOU0kqS77TA7Fftl8nSzktXLzFpOLGqCZEAhjg",
-          "shortId": "aaec521b22bbe6cb",
+          "publicKey": "i3cJbIu8AN7qCD7xQTVfCN7de9RkxVohk_PGQgHqRl8",
+          "shortId": "52a74e01683e9173",
           "spiderX": ""
         }
       }
@@ -127,11 +126,39 @@
       "settings": {
         "vnext": [
           {
-            "address": "161.97.160.224",
+            "address": "38.180.50.4",
+            "port": 8443,
+            "users": [
+              {
+                "id": "1f113ca6-7b95-4abb-9348-adfb2187e399",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "tutdesignstudio.site",
+          "fingerprint": "firefox",
+          "allowInsecure": false
+        }
+      }
+    },
+    {
+      "tag": "proxy-5",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "grek.helper-internet.com",
             "port": 443,
             "users": [
               {
-                "id": "b81b4d1b-7f20-48f1-82dc-d24bef898cab",
+                "id": "670decfe-68cc-499e-8cb1-22b39c20acbb",
                 "encryption": "none",
                 "flow": "xtls-rprx-vision"
               }
@@ -143,26 +170,27 @@
         "network": "tcp",
         "security": "reality",
         "realitySettings": {
-          "serverName": "passport.yandex.ru",
+          "serverName": "grek.helper-internet.com",
           "fingerprint": "firefox",
-          "publicKey": "33zaT3jHXjtynSQ0Ucw9bK92-XH2zolJmuIeZ1XyZB0",
-          "shortId": "e6",
+          "publicKey": "W-zf_ncm9sYALF5EqvUsxqTkYGdAw-tQczT2SqwVMGE",
+          "shortId": "ff776ff77be48b88",
           "spiderX": ""
         }
       }
     },
     {
-      "tag": "proxy-5",
+      "tag": "proxy-6",
       "protocol": "vless",
       "settings": {
         "vnext": [
           {
-            "address": "sahanwickramasinghevip.shop",
+            "address": "82.38.4.126",
             "port": 443,
             "users": [
               {
-                "id": "55d61055-1a7f-4bc5-aca2-4ee78c738b60",
-                "encryption": "none"
+                "id": "53c76647-14d1-4df5-99cb-be99ad2e6bd9",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
               }
             ]
           }
@@ -172,8 +200,8 @@
         "network": "tcp",
         "security": "tls",
         "tlsSettings": {
-          "serverName": "sahanwickramasinghevip.shop",
-          "fingerprint": "chrome",
+          "serverName": "de126.mechvpn.online",
+          "fingerprint": "firefox",
           "allowInsecure": false
         }
       }
