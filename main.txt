@@ -37,7 +37,7 @@
       "settings": {
         "vnext": [
           {
-            "address": "45.147.251.25",
+            "address": "176.12.73.145",
             "port": 443,
             "users": [
               {
@@ -53,10 +53,10 @@
         "network": "tcp",
         "security": "reality",
         "realitySettings": {
-          "serverName": "eu-west.cendora.ru",
-          "fingerprint": "firefox",
-          "publicKey": "m6RDw1b8R4lCaRUIzhHpy6TtX2Dhk6nyby8dWzeQqA0",
-          "shortId": "dd3ff38418d29d22",
+          "serverName": "nordic.cendora.ru",
+          "fingerprint": "chrome",
+          "publicKey": "YQTixaXzPVImuRc4TUbrFAekjIiaYV-t5S-HTKlH0AU",
+          "shortId": "2186a755ed67b034",
           "spiderX": ""
         }
       }
@@ -67,12 +67,13 @@
       "settings": {
         "vnext": [
           {
-            "address": "86.107.178.66",
-            "port": 448,
+            "address": "161.97.160.224",
+            "port": 443,
             "users": [
               {
-                "id": "b3eed393-e990-40a0-978c-689d40be9da4",
-                "encryption": "none"
+                "id": "b81b4d1b-7f20-48f1-82dc-d24bef898cab",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
               }
             ]
           }
@@ -82,10 +83,10 @@
         "network": "tcp",
         "security": "reality",
         "realitySettings": {
-          "serverName": "www.samsung.com",
+          "serverName": "passport.yandex.ru",
           "fingerprint": "firefox",
-          "publicKey": "i3cJbIu8AN7qCD7xQTVfCN7de9RkxVohk_PGQgHqRl8",
-          "shortId": "52a74e01683e9173",
+          "publicKey": "33zaT3jHXjtynSQ0Ucw9bK92-XH2zolJmuIeZ1XyZB0",
+          "shortId": "e6",
           "spiderX": ""
         }
       }
@@ -126,35 +127,7 @@
       "settings": {
         "vnext": [
           {
-            "address": "38.180.50.4",
-            "port": 8443,
-            "users": [
-              {
-                "id": "1f113ca6-7b95-4abb-9348-adfb2187e399",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "tutdesignstudio.site",
-          "fingerprint": "firefox",
-          "allowInsecure": false
-        }
-      }
-    },
-    {
-      "tag": "proxy-5",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "grek.helper-internet.com",
+            "address": "185.209.15.215",
             "port": 443,
             "users": [
               {
@@ -170,39 +143,11 @@
         "network": "tcp",
         "security": "reality",
         "realitySettings": {
-          "serverName": "grek.helper-internet.com",
+          "serverName": "nl7.helper-internet.com",
           "fingerprint": "firefox",
-          "publicKey": "W-zf_ncm9sYALF5EqvUsxqTkYGdAw-tQczT2SqwVMGE",
-          "shortId": "ff776ff77be48b88",
+          "publicKey": "pgG2grngQEtOFJImLfz0AEm-O2IodM2jCY4aMCYQI1U",
+          "shortId": "6aa2d2e950441a9a",
           "spiderX": ""
-        }
-      }
-    },
-    {
-      "tag": "proxy-6",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "82.38.4.126",
-            "port": 443,
-            "users": [
-              {
-                "id": "53c76647-14d1-4df5-99cb-be99ad2e6bd9",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "de126.mechvpn.online",
-          "fingerprint": "firefox",
-          "allowInsecure": false
         }
       }
     },
