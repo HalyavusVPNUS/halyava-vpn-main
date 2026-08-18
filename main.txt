@@ -37,11 +37,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "66.175.217.170",
-            "port": 443,
+            "address": "89.125.168.45",
+            "port": 53060,
             "users": [
               {
-                "id": "b98d4c6e-6770-4a31-8256-a4750cdea0e7",
+                "id": "526c4eb2-9b4e-563a-b9e4-7fd6d0f28733",
                 "encryption": "none",
                 "flow": "xtls-rprx-vision"
               }
@@ -53,10 +53,10 @@
         "network": "tcp",
         "security": "reality",
         "realitySettings": {
-          "serverName": "www.amazon.com",
+          "serverName": "www.vk.com",
           "fingerprint": "firefox",
-          "publicKey": "0i_xAxYgSNx5NMpK2lOaWGS-CvAiD_LneYPO0MF0owo",
-          "shortId": "1a",
+          "publicKey": "ImZszpFLaRorXOn0ISNH4V1YN71lwaLJzzvqqnFwPHk",
+          "shortId": "ef73bb",
           "spiderX": ""
         }
       }
@@ -67,11 +67,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "66.175.217.170",
-            "port": 443,
+            "address": "89.125.168.45",
+            "port": 53060,
             "users": [
               {
-                "id": "b98d4c6e-6770-4a31-8256-a4750cdea0e7",
+                "id": "526c4eb2-9b4e-563a-b9e4-7fd6d0f28733",
                 "encryption": "none",
                 "flow": "xtls-rprx-vision"
               }
@@ -83,10 +83,10 @@
         "network": "tcp",
         "security": "reality",
         "realitySettings": {
-          "serverName": "www.amazon.com",
-          "fingerprint": "chrome",
-          "publicKey": "0i_xAxYgSNx5NMpK2lOaWGS-CvAiD_LneYPO0MF0owo",
-          "shortId": "1a",
+          "serverName": "www.vk.com",
+          "fingerprint": "firefox",
+          "publicKey": "ImZszpFLaRorXOn0ISNH4V1YN71lwaLJzzvqqnFwPHk",
+          "shortId": "ef73bb",
           "spiderX": ""
         }
       }
@@ -126,11 +126,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "it.morinsq.su",
-            "port": 443,
+            "address": "217.217.254.126",
+            "port": 2053,
             "users": [
               {
-                "id": "93fab704-cea7-4ca4-a9ac-5bb46aef263c",
+                "id": "6b408e62-c5d5-45e1-ae3a-4c9833d46d82",
                 "encryption": "none"
               }
             ]
@@ -141,40 +141,10 @@
         "network": "tcp",
         "security": "reality",
         "realitySettings": {
-          "serverName": "it.morinsq.su",
+          "serverName": "www.cloudflare.com",
           "fingerprint": "chrome",
-          "publicKey": "D3qByJ6qqJd5phYkfAtJpBqAhSb8VHPax1ZhvI3ZKEE",
-          "shortId": "96e380212691bba8",
-          "spiderX": ""
-        }
-      }
-    },
-    {
-      "tag": "proxy-5",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "81.85.75.85",
-            "port": 443,
-            "users": [
-              {
-                "id": "423b1d79-08c4-403f-9d5e-c541f791b55f",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "baltic.cendora.ru",
-          "fingerprint": "firefox",
-          "publicKey": "t_qv0VOfWhKZJV_giGC55-ipgHYWo44Yfvik_B8T8ik",
-          "shortId": "4a46213c935e2ee4",
+          "publicKey": "T4CMxxAJiCcrGk2r87kMkDcvmfNs3nL-gKleaE1wTHQ",
+          "shortId": "fb7ebc9996caf9ac",
           "spiderX": ""
         }
       }
