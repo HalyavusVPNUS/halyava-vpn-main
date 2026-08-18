@@ -32,16 +32,16 @@
   ],
   "outbounds": [
     {
-      "tag": "proxy-1",
+      "tag": "proxy-2",
       "protocol": "vless",
       "settings": {
         "vnext": [
           {
-            "address": "bftu-stnbal.servora.top",
+            "address": "161.97.160.224",
             "port": 443,
             "users": [
               {
-                "id": "432ab7a2-6e2b-4f0b-be4a-06bdcc714624",
+                "id": "b81b4d1b-7f20-48f1-82dc-d24bef898cab",
                 "encryption": "none",
                 "flow": "xtls-rprx-vision"
               }
@@ -53,39 +53,10 @@
         "network": "tcp",
         "security": "reality",
         "realitySettings": {
-          "serverName": "www.bing.com",
-          "fingerprint": "chrome",
-          "publicKey": "mCDHZBY0AYAeY7Aj7COGaegrm7QAwfueYYSC02vqbSY",
-          "shortId": "0d8ca7e0b3d26321",
-          "spiderX": ""
-        }
-      }
-    },
-    {
-      "tag": "proxy-2",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "194.61.31.126",
-            "port": 2053,
-            "users": [
-              {
-                "id": "7f1f5848-da44-47df-8581-df83e88ee2b3",
-                "encryption": "none"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "www.apple.com",
+          "serverName": "passport.yandex.ru",
           "fingerprint": "firefox",
-          "publicKey": "GAYlNViQ9mkjs0iTjNmijAIXOaK2h0P2opHCYOrCNy0",
-          "shortId": "ae3ba555edc1ba0a",
+          "publicKey": "33zaT3jHXjtynSQ0Ucw9bK92-XH2zolJmuIeZ1XyZB0",
+          "shortId": "e6",
           "spiderX": ""
         }
       }
