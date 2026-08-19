@@ -37,13 +37,12 @@
       "settings": {
         "vnext": [
           {
-            "address": "144.31.76.198",
-            "port": 13443,
+            "address": "13.193.205.133",
+            "port": 27407,
             "users": [
               {
-                "id": "423b1d79-08c4-403f-9d5e-c541f791b55f",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
+                "id": "cd5cf6e7-7ce5-42c9-9316-68210fa72a32",
+                "encryption": "none"
               }
             ]
           }
@@ -53,40 +52,10 @@
         "network": "tcp",
         "security": "reality",
         "realitySettings": {
-          "serverName": "auto.cendora.ru",
+          "serverName": "bgcpartners.com",
           "fingerprint": "chrome",
-          "publicKey": "gc9oXe37KCCm3J1dJ03wdGsnxPBdeEkRPOvl_t-vfVM",
-          "shortId": "a7f3c91b2e6d84c0",
-          "spiderX": ""
-        }
-      }
-    },
-    {
-      "tag": "proxy-2",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "103.76.85.171",
-            "port": 443,
-            "users": [
-              {
-                "id": "9abba46f-b346-435e-9408-6eaffc62144b",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "www.apple.com",
-          "fingerprint": "chrome",
-          "publicKey": "20Ik7FkA1OT40lGjeczJTsJMd7ceZlWWxFKyR-1TdEs",
-          "shortId": "161280da3a1e69e0",
+          "publicKey": "SajK6LzHBkkFlEXjIwseyqbpezgPiop5ZnSToou3G04",
+          "shortId": "e6ac18b63f23",
           "spiderX": ""
         }
       }
