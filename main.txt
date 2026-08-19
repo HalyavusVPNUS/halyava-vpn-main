@@ -37,12 +37,13 @@
       "settings": {
         "vnext": [
           {
-            "address": "45.155.70.123",
-            "port": 8443,
+            "address": "45.198.80.192",
+            "port": 443,
             "users": [
               {
-                "id": "f82332b2-dc8c-eac4-ac12-f276e37e278a",
-                "encryption": "none"
+                "id": "eece4171-e025-40a3-9027-e395036ff99d",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
               }
             ]
           }
@@ -52,10 +53,10 @@
         "network": "tcp",
         "security": "reality",
         "realitySettings": {
-          "serverName": "s1.test.anti-zapret.com",
-          "fingerprint": "firefox",
-          "publicKey": "0AVsyS7udTbxKRdSyQ2rtFC63icDQOVWq8FvAhhU-WY",
-          "shortId": "58fbcddfaae3ade9",
+          "serverName": "storage.yandex.net",
+          "fingerprint": "chrome",
+          "publicKey": "zr8_rtHm86s_G1gfRwNtunStGngYZSdYkA3PyBFXpDg",
+          "shortId": "28047c78b3f5ee2c",
           "spiderX": ""
         }
       }
