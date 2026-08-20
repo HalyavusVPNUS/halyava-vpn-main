@@ -37,7 +37,7 @@
       "settings": {
         "vnext": [
           {
-            "address": "t18.qifei.app",
+            "address": "66.175.217.170",
             "port": 443,
             "users": [
               {
@@ -67,7 +67,7 @@
       "settings": {
         "vnext": [
           {
-            "address": "45.155.70.123",
+            "address": "s1.test.anti-zapret.com",
             "port": 8443,
             "users": [
               {
@@ -96,13 +96,12 @@
       "settings": {
         "vnext": [
           {
-            "address": "deh.skysafe.online",
-            "port": 2027,
+            "address": "45.155.70.123",
+            "port": 8443,
             "users": [
               {
-                "id": "579f0893-e6f9-4036-86a1-7c10aa2d24ea",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
+                "id": "f82332b2-dc8c-eac4-ac12-f276e37e278a",
+                "encryption": "none"
               }
             ]
           }
@@ -112,10 +111,10 @@
         "network": "tcp",
         "security": "reality",
         "realitySettings": {
-          "serverName": "deh.skysafe.online",
-          "fingerprint": "qq",
-          "publicKey": "EApxy12MeXpqt-78odxizwcXT6hX9f8XeAcbMDVRAV0",
-          "shortId": "6ba7b8109dad11d1",
+          "serverName": "s1.test.anti-zapret.com",
+          "fingerprint": "chrome",
+          "publicKey": "0AVsyS7udTbxKRdSyQ2rtFC63icDQOVWq8FvAhhU-WY",
+          "shortId": "58fbcddfaae3ade9",
           "spiderX": ""
         }
       }
@@ -126,7 +125,7 @@
       "settings": {
         "vnext": [
           {
-            "address": "93.123.39.10",
+            "address": "93.123.39.81",
             "port": 443,
             "users": [
               {
@@ -156,11 +155,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "194.61.31.126",
-            "port": 2053,
+            "address": "13.193.205.133",
+            "port": 27407,
             "users": [
               {
-                "id": "7f1f5848-da44-47df-8581-df83e88ee2b3",
+                "id": "cd5cf6e7-7ce5-42c9-9316-68210fa72a32",
                 "encryption": "none"
               }
             ]
@@ -171,10 +170,69 @@
         "network": "tcp",
         "security": "reality",
         "realitySettings": {
-          "serverName": "www.apple.com",
+          "serverName": "bgcpartners.com",
+          "fingerprint": "chrome",
+          "publicKey": "SajK6LzHBkkFlEXjIwseyqbpezgPiop5ZnSToou3G04",
+          "shortId": "e6ac18b63f23",
+          "spiderX": ""
+        }
+      }
+    },
+    {
+      "tag": "proxy-6",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "13.193.205.133",
+            "port": 27407,
+            "users": [
+              {
+                "id": "cd5cf6e7-7ce5-42c9-9316-68210fa72a32",
+                "encryption": "none"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "bgcpartners.com",
           "fingerprint": "firefox",
-          "publicKey": "GAYlNViQ9mkjs0iTjNmijAIXOaK2h0P2opHCYOrCNy0",
-          "shortId": "ae3ba555edc1ba0a",
+          "publicKey": "SajK6LzHBkkFlEXjIwseyqbpezgPiop5ZnSToou3G04",
+          "shortId": "e6ac18b63f23",
+          "spiderX": ""
+        }
+      }
+    },
+    {
+      "tag": "proxy-7",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "217.9.12.233",
+            "port": 443,
+            "users": [
+              {
+                "id": "d96e05a1-18bb-45da-9e9f-ab7caab6952a",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "ee.cdn-global.pro",
+          "fingerprint": "firefox",
+          "publicKey": "RO5YMxxtJmZo2w370qG-seJ41toowHPbz6i2uXJ2gG0",
+          "shortId": "7a3f9e2b1c8d4f6a",
           "spiderX": ""
         }
       }
