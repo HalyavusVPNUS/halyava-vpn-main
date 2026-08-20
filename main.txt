@@ -37,7 +37,7 @@
       "settings": {
         "vnext": [
           {
-            "address": "66.175.217.170",
+            "address": "t18.qifei.app",
             "port": 443,
             "users": [
               {
@@ -57,6 +57,35 @@
           "fingerprint": "chrome",
           "publicKey": "0i_xAxYgSNx5NMpK2lOaWGS-CvAiD_LneYPO0MF0owo",
           "shortId": "1a",
+          "spiderX": ""
+        }
+      }
+    },
+    {
+      "tag": "proxy-2",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "13.193.205.133",
+            "port": 27407,
+            "users": [
+              {
+                "id": "cd5cf6e7-7ce5-42c9-9316-68210fa72a32",
+                "encryption": "none"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "bgcpartners.com",
+          "fingerprint": "firefox",
+          "publicKey": "SajK6LzHBkkFlEXjIwseyqbpezgPiop5ZnSToou3G04",
+          "shortId": "e6ac18b63f23",
           "spiderX": ""
         }
       }
