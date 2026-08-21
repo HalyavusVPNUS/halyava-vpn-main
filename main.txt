@@ -37,40 +37,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "23.94.227.94",
-            "port": 15884,
+            "address": "103.137.215.210",
+            "port": 443,
             "users": [
               {
-                "id": "c543f497-6a6d-4842-8317-a5f62ea56dc2",
-                "encryption": "none"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "www.intel.com",
-          "fingerprint": "chrome",
-          "publicKey": "rZAYGSqaklKNltwTGPpAok74VYCxV9uKvrOyydSn9UE",
-          "shortId": "a391369e7596",
-          "spiderX": ""
-        }
-      }
-    },
-    {
-      "tag": "proxy-2",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "88.218.92.164",
-            "port": 13443,
-            "users": [
-              {
-                "id": "423b1d79-08c4-403f-9d5e-c541f791b55f",
+                "id": "de8279f8-fed5-4659-b387-faaa6ac0ec69",
                 "encryption": "none",
                 "flow": "xtls-rprx-vision"
               }
@@ -82,10 +53,39 @@
         "network": "tcp",
         "security": "reality",
         "realitySettings": {
-          "serverName": "auto.cendora.ru",
-          "fingerprint": "qq",
-          "publicKey": "gc9oXe37KCCm3J1dJ03wdGsnxPBdeEkRPOvl_t-vfVM",
-          "shortId": "a7f3c91b2e6d84c0",
+          "serverName": "www.apple.com",
+          "fingerprint": "chrome",
+          "publicKey": "SPHwYIULnH_KvP5dd6VvZGSb4XXHEeavvQ-F_H_t0Fo",
+          "shortId": "7509854886b4e484",
+          "spiderX": ""
+        }
+      }
+    },
+    {
+      "tag": "proxy-2",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "13.193.205.133",
+            "port": 27407,
+            "users": [
+              {
+                "id": "cd5cf6e7-7ce5-42c9-9316-68210fa72a32",
+                "encryption": "none"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "bgcpartners.com",
+          "fingerprint": "chrome",
+          "publicKey": "SajK6LzHBkkFlEXjIwseyqbpezgPiop5ZnSToou3G04",
+          "shortId": "e6ac18b63f23",
           "spiderX": ""
         }
       }
