@@ -37,11 +37,40 @@
       "settings": {
         "vnext": [
           {
-            "address": "103.137.215.210",
-            "port": 443,
+            "address": "46.250.250.149",
+            "port": 2053,
             "users": [
               {
-                "id": "de8279f8-fed5-4659-b387-faaa6ac0ec69",
+                "id": "8e16742a-78d5-4327-9052-f86a9ce50f49",
+                "encryption": "none"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "www.apple.com",
+          "fingerprint": "firefox",
+          "publicKey": "SIBS0hevQuPeJiBQUoN5MYq8Gs_ZWyBlkHK6miz__kM",
+          "shortId": "90decc62dab9873f",
+          "spiderX": ""
+        }
+      }
+    },
+    {
+      "tag": "proxy-2",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "80.66.72.179",
+            "port": 2053,
+            "users": [
+              {
+                "id": "28007472-a4e9-4881-984a-2bf6b3d35917",
                 "encryption": "none",
                 "flow": "xtls-rprx-vision"
               }
@@ -53,25 +82,25 @@
         "network": "tcp",
         "security": "reality",
         "realitySettings": {
-          "serverName": "www.apple.com",
-          "fingerprint": "chrome",
-          "publicKey": "SPHwYIULnH_KvP5dd6VvZGSb4XXHEeavvQ-F_H_t0Fo",
-          "shortId": "7509854886b4e484",
+          "serverName": "teamdocs.su",
+          "fingerprint": "random",
+          "publicKey": "Yed352UFUwRyZWPyVYM_0OvLkxvCjOB7160DdAxKsWE",
+          "shortId": "bc5e336f8fdb",
           "spiderX": ""
         }
       }
     },
     {
-      "tag": "proxy-2",
+      "tag": "proxy-3",
       "protocol": "vless",
       "settings": {
         "vnext": [
           {
-            "address": "13.193.205.133",
-            "port": 27407,
+            "address": "46.250.240.80",
+            "port": 2053,
             "users": [
               {
-                "id": "cd5cf6e7-7ce5-42c9-9316-68210fa72a32",
+                "id": "f2816a01-3555-4e79-9e26-770f050ea55a",
                 "encryption": "none"
               }
             ]
@@ -82,10 +111,10 @@
         "network": "tcp",
         "security": "reality",
         "realitySettings": {
-          "serverName": "bgcpartners.com",
-          "fingerprint": "chrome",
-          "publicKey": "SajK6LzHBkkFlEXjIwseyqbpezgPiop5ZnSToou3G04",
-          "shortId": "e6ac18b63f23",
+          "serverName": "www.apple.com",
+          "fingerprint": "firefox",
+          "publicKey": "bRDaP068YgdwwdQgenUvKTNfPjIB_Dy-lJDFC9ZZEXU",
+          "shortId": "632a146bd581641a",
           "spiderX": ""
         }
       }
