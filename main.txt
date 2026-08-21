@@ -37,13 +37,12 @@
       "settings": {
         "vnext": [
           {
-            "address": "66.175.217.170",
-            "port": 443,
+            "address": "23.94.227.94",
+            "port": 15884,
             "users": [
               {
-                "id": "b98d4c6e-6770-4a31-8256-a4750cdea0e7",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
+                "id": "c543f497-6a6d-4842-8317-a5f62ea56dc2",
+                "encryption": "none"
               }
             ]
           }
@@ -53,10 +52,10 @@
         "network": "tcp",
         "security": "reality",
         "realitySettings": {
-          "serverName": "www.amazon.com",
+          "serverName": "www.intel.com",
           "fingerprint": "chrome",
-          "publicKey": "0i_xAxYgSNx5NMpK2lOaWGS-CvAiD_LneYPO0MF0owo",
-          "shortId": "1a",
+          "publicKey": "rZAYGSqaklKNltwTGPpAok74VYCxV9uKvrOyydSn9UE",
+          "shortId": "a391369e7596",
           "spiderX": ""
         }
       }
