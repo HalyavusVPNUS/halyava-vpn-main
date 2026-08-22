@@ -37,7 +37,37 @@
       "settings": {
         "vnext": [
           {
-            "address": "82.25.63.92",
+            "address": "66.175.217.170",
+            "port": 443,
+            "users": [
+              {
+                "id": "b98d4c6e-6770-4a31-8256-a4750cdea0e7",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "www.amazon.com",
+          "fingerprint": "chrome",
+          "publicKey": "0i_xAxYgSNx5NMpK2lOaWGS-CvAiD_LneYPO0MF0owo",
+          "shortId": "1a",
+          "spiderX": ""
+        }
+      }
+    },
+    {
+      "tag": "proxy-2",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "176.65.144.225",
             "port": 1443,
             "users": [
               {
@@ -53,25 +83,25 @@
         "network": "tcp",
         "security": "reality",
         "realitySettings": {
-          "serverName": "kruassan.buildsnow.top",
+          "serverName": "ch.snowfalls.top",
           "fingerprint": "firefox",
-          "publicKey": "_ulb4xykTvrGqAOxFKCK3Oce0aDT9fVAU2cPbYRkOT0",
-          "shortId": "eab4bc60d31415c3",
+          "publicKey": "rvOPhBAT3c5Uok7UDuxVfML3j4mib3Y9MU_Cd9M822c",
+          "shortId": "0441f3e34348cb45",
           "spiderX": ""
         }
       }
     },
     {
-      "tag": "proxy-2",
+      "tag": "proxy-3",
       "protocol": "vless",
       "settings": {
         "vnext": [
           {
-            "address": "13.193.205.133",
-            "port": 27407,
+            "address": "194.61.31.126",
+            "port": 2053,
             "users": [
               {
-                "id": "cd5cf6e7-7ce5-42c9-9316-68210fa72a32",
+                "id": "0bf89828-484f-4710-9581-12aa961e3bf1",
                 "encryption": "none"
               }
             ]
@@ -82,10 +112,10 @@
         "network": "tcp",
         "security": "reality",
         "realitySettings": {
-          "serverName": "bgcpartners.com",
-          "fingerprint": "chrome",
-          "publicKey": "SajK6LzHBkkFlEXjIwseyqbpezgPiop5ZnSToou3G04",
-          "shortId": "e6ac18b63f23",
+          "serverName": "www.apple.com",
+          "fingerprint": "firefox",
+          "publicKey": "Gy6W0bXf2bpxoG1k3szp8X0ekzoyXlEtzT8V4mYQ3EE",
+          "shortId": "29fe4205ddc971a8",
           "spiderX": ""
         }
       }
