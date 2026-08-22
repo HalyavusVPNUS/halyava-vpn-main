@@ -62,35 +62,6 @@
       }
     },
     {
-      "tag": "proxy-2",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "185.168.195.211",
-            "port": 21527,
-            "users": [
-              {
-                "id": "32ed7262-74d2-40ea-a038-6bf074bc463e",
-                "encryption": "none"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "www.apple.com",
-          "fingerprint": "firefox",
-          "publicKey": "SsIiRnSI27T6_EU71nUXgFfE0NmJhsA2UwhR5WC25UY",
-          "shortId": "823ec0b7b5084ffe",
-          "spiderX": ""
-        }
-      }
-    },
-    {
       "tag": "direct",
       "protocol": "freedom"
     },
