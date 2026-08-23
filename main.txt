@@ -32,6 +32,66 @@
   ],
   "outbounds": [
     {
+      "tag": "proxy-1",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "85.155.226.174",
+            "port": 443,
+            "users": [
+              {
+                "id": "39c42b0a-b823-4c93-bb99-74b4183e518d",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "getsavesafe.net",
+          "fingerprint": "firefox",
+          "publicKey": "5Z6PwoPSNBLPIsX8lZtHM7-Y-psMMR1vz5Pit0EVISs",
+          "shortId": "82f5d3a1e9c0b661",
+          "spiderX": ""
+        }
+      }
+    },
+    {
+      "tag": "proxy-2",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "85.155.226.210",
+            "port": 443,
+            "users": [
+              {
+                "id": "39c42b0a-b823-4c93-bb99-74b4183e518d",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "getsavesafe.net",
+          "fingerprint": "qq",
+          "publicKey": "5Z6PwoPSNBLPIsX8lZtHM7-Y-psMMR1vz5Pit0EVISs",
+          "shortId": "82f5d3a1e9c0b661",
+          "spiderX": ""
+        }
+      }
+    },
+    {
       "tag": "direct",
       "protocol": "freedom"
     },
