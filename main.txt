@@ -32,65 +32,6 @@
   ],
   "outbounds": [
     {
-      "tag": "proxy-1",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "45.155.70.124",
-            "port": 8443,
-            "users": [
-              {
-                "id": "1b627e4d-4ea4-eac4-8bd8-fc2d3ffbeaba",
-                "encryption": "none"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "de-exit-cdn-mirror.anti-zapret.com",
-          "fingerprint": "firefox",
-          "publicKey": "0AVsyS7udTbxKRdSyQ2rtFC63icDQOVWq8FvAhhU-WY",
-          "shortId": "17faf32cb516c9cb",
-          "spiderX": ""
-        }
-      }
-    },
-    {
-      "tag": "proxy-2",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "43.161.225.44",
-            "port": 443,
-            "users": [
-              {
-                "id": "904183f1-0495-478b-b11f-1fe12e84ad8b",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "www.apple.com",
-          "fingerprint": "chrome",
-          "publicKey": "j0mfhbzohqV1W_PaNeYyKEVuaiK1-A9k2AQJQK7ZDzQ",
-          "shortId": "4aeab483de4dd53a",
-          "spiderX": ""
-        }
-      }
-    },
-    {
       "tag": "direct",
       "protocol": "freedom"
     },
