@@ -32,36 +32,6 @@
   ],
   "outbounds": [
     {
-      "tag": "proxy-1",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "166.1.89.71",
-            "port": 443,
-            "users": [
-              {
-                "id": "5f07e685-e1fa-43f4-810e-eeda988ca570",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "us.bestcats-video.online",
-          "fingerprint": "firefox",
-          "publicKey": "RaBA9d80-mX3G2CXMGnR1wdwas9JOKVCeCINZ2MQQF8",
-          "shortId": "",
-          "spiderX": ""
-        }
-      }
-    },
-    {
       "tag": "proxy-2",
       "protocol": "vless",
       "settings": {
@@ -112,7 +82,7 @@
         "security": "reality",
         "realitySettings": {
           "serverName": "bgcpartners.com",
-          "fingerprint": "firefox",
+          "fingerprint": "chrome",
           "publicKey": "SajK6LzHBkkFlEXjIwseyqbpezgPiop5ZnSToou3G04",
           "shortId": "e6ac18b63f23",
           "spiderX": ""
@@ -141,7 +111,7 @@
         "security": "reality",
         "realitySettings": {
           "serverName": "bgcpartners.com",
-          "fingerprint": "chrome",
+          "fingerprint": "firefox",
           "publicKey": "SajK6LzHBkkFlEXjIwseyqbpezgPiop5ZnSToou3G04",
           "shortId": "e6ac18b63f23",
           "spiderX": ""
@@ -154,11 +124,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "7fc98f3e-f9da-4062-9a0f-1940a38e3a38.a779f8b2-5d90-4830-bd21-3005d997ccd6.smartprivatelink.com",
+            "address": "45.196.201.248",
             "port": 443,
             "users": [
               {
-                "id": "948f0b34-3e53-49e8-9874-b75cef63dbcb",
+                "id": "f75814f6-8f81-4847-b792-168c41f2dc85",
                 "encryption": "none",
                 "flow": "xtls-rprx-vision"
               }
@@ -170,75 +140,16 @@
         "network": "tcp",
         "security": "reality",
         "realitySettings": {
-          "serverName": "www.samsung.com",
-          "fingerprint": "chrome",
-          "publicKey": "aTPjxfJ5QPGxYRyQ8SRnYwyXUhuasda7i5Dc5VoKxVY",
-          "shortId": "4c9fbcb1",
+          "serverName": "storage.yandex.net",
+          "fingerprint": "firefox",
+          "publicKey": "zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04",
+          "shortId": "c6ef72e4635d15a5",
           "spiderX": ""
         }
       }
     },
     {
       "tag": "proxy-6",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "176.65.151.83",
-            "port": 37430,
-            "users": [
-              {
-                "id": "a3f6f20c-ba4f-4287-b218-e69ce80f7cd8",
-                "encryption": "none"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "amp-api-edge.apps.apple.com",
-          "fingerprint": "chrome",
-          "publicKey": "SH-kDcAJqxHIyvtvSjt9DIiOy-5pscb8-Xdt8QxmG38",
-          "shortId": "",
-          "spiderX": ""
-        }
-      }
-    },
-    {
-      "tag": "proxy-7",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "109.169.37.126",
-            "port": 443,
-            "users": [
-              {
-                "id": "acf97281-81bf-41eb-b889-c9be5dd84894",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "foodnetwork.com",
-          "fingerprint": "firefox",
-          "publicKey": "SiSky02wHz-S0TDHKFTdYhnrlT8Y3CfRsekZlcdLXDY",
-          "shortId": "fd55b698ee8c3629",
-          "spiderX": ""
-        }
-      }
-    },
-    {
-      "tag": "proxy-8",
       "protocol": "vless",
       "settings": {
         "vnext": [
