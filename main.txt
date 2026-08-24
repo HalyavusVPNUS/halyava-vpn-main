@@ -37,11 +37,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "109.169.76.34",
+            "address": "169.40.42.16",
             "port": 443,
             "users": [
               {
-                "id": "b2bef9e4-0e52-43d7-9613-f6e73c2eb970",
+                "id": "d65cc14c-f53f-4fe2-b262-97856601319c",
                 "encryption": "none",
                 "flow": "xtls-rprx-vision"
               }
@@ -53,16 +53,16 @@
         "network": "tcp",
         "security": "reality",
         "realitySettings": {
-          "serverName": "slashdot.org",
-          "fingerprint": "firefox",
-          "publicKey": "JZ6o_q7-OSJ87w9kTrcn9I4UiMVZdPUnjXoRs4TbLzE",
-          "shortId": "61811b12a62fb2a4",
+          "serverName": "yahoo.com",
+          "fingerprint": "chrome",
+          "publicKey": "e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg",
+          "shortId": "c39cc7310a",
           "spiderX": ""
         }
       }
     },
     {
-      "tag": "proxy-2",
+      "tag": "proxy-3",
       "protocol": "vless",
       "settings": {
         "vnext": [
@@ -92,48 +92,17 @@
       }
     },
     {
-      "tag": "proxy-3",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "cz.freeinternat.com",
-            "port": 443,
-            "users": [
-              {
-                "id": "fbb74aa8-b89a-4f20-9504-6b25aadf6681",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "cz.freeinternat.com",
-          "fingerprint": "firefox",
-          "publicKey": "bZpzmeWiEJyJQy0W2hHc34Nr6BuFXj1UDd80Cbwh1Fk",
-          "shortId": "ff776ff77be48b88",
-          "spiderX": ""
-        }
-      }
-    },
-    {
       "tag": "proxy-4",
       "protocol": "vless",
       "settings": {
         "vnext": [
           {
-            "address": "2.26.128.76",
-            "port": 443,
+            "address": "176.65.151.83",
+            "port": 37430,
             "users": [
               {
-                "id": "627b1c2d-2905-470f-857a-da7589968fbc",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
+                "id": "a3f6f20c-ba4f-4287-b218-e69ce80f7cd8",
+                "encryption": "none"
               }
             ]
           }
@@ -143,10 +112,10 @@
         "network": "tcp",
         "security": "reality",
         "realitySettings": {
-          "serverName": "wombat.mycdn-me.ru",
-          "fingerprint": "firefox",
-          "publicKey": "w88Ys8dVF9DuslGwUD05J9-FHNoAT9qmPysCvHiEmmg",
-          "shortId": "1b40e7c2a1d8f635",
+          "serverName": "amp-api-edge.apps.apple.com",
+          "fingerprint": "chrome",
+          "publicKey": "SH-kDcAJqxHIyvtvSjt9DIiOy-5pscb8-Xdt8QxmG38",
+          "shortId": "",
           "spiderX": ""
         }
       }
@@ -187,12 +156,13 @@
       "settings": {
         "vnext": [
           {
-            "address": "13.193.205.133",
-            "port": 27407,
+            "address": "cz.freeinternat.com",
+            "port": 443,
             "users": [
               {
-                "id": "cd5cf6e7-7ce5-42c9-9316-68210fa72a32",
-                "encryption": "none"
+                "id": "fbb74aa8-b89a-4f20-9504-6b25aadf6681",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
               }
             ]
           }
@@ -202,16 +172,46 @@
         "network": "tcp",
         "security": "reality",
         "realitySettings": {
-          "serverName": "bgcpartners.com",
-          "fingerprint": "chrome",
-          "publicKey": "SajK6LzHBkkFlEXjIwseyqbpezgPiop5ZnSToou3G04",
-          "shortId": "e6ac18b63f23",
+          "serverName": "cz.freeinternat.com",
+          "fingerprint": "firefox",
+          "publicKey": "bZpzmeWiEJyJQy0W2hHc34Nr6BuFXj1UDd80Cbwh1Fk",
+          "shortId": "ff776ff77be48b88",
           "spiderX": ""
         }
       }
     },
     {
       "tag": "proxy-7",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "138.2.94.44",
+            "port": 8899,
+            "users": [
+              {
+                "id": "ca9cec48-bc34-4d6e-92d5-d0cd56150e51",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "www.lovelive-anime.jp",
+          "fingerprint": "ios",
+          "publicKey": "-kGaCYGM_MImDMVkOsFp4yvv4dLy3FXe9gqAtf4eYF8",
+          "shortId": "905ae32a",
+          "spiderX": ""
+        }
+      }
+    },
+    {
+      "tag": "proxy-8",
       "protocol": "vless",
       "settings": {
         "vnext": [
@@ -241,16 +241,16 @@
       }
     },
     {
-      "tag": "proxy-8",
+      "tag": "proxy-9",
       "protocol": "vless",
       "settings": {
         "vnext": [
           {
-            "address": "138.2.94.44",
-            "port": 8899,
+            "address": "2.26.128.76",
+            "port": 443,
             "users": [
               {
-                "id": "ca9cec48-bc34-4d6e-92d5-d0cd56150e51",
+                "id": "627b1c2d-2905-470f-857a-da7589968fbc",
                 "encryption": "none",
                 "flow": "xtls-rprx-vision"
               }
@@ -262,10 +262,10 @@
         "network": "tcp",
         "security": "reality",
         "realitySettings": {
-          "serverName": "www.lovelive-anime.jp",
-          "fingerprint": "ios",
-          "publicKey": "-kGaCYGM_MImDMVkOsFp4yvv4dLy3FXe9gqAtf4eYF8",
-          "shortId": "905ae32a",
+          "serverName": "wombat.mycdn-me.ru",
+          "fingerprint": "firefox",
+          "publicKey": "w88Ys8dVF9DuslGwUD05J9-FHNoAT9qmPysCvHiEmmg",
+          "shortId": "1b40e7c2a1d8f635",
           "spiderX": ""
         }
       }
