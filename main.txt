@@ -67,13 +67,12 @@
       "settings": {
         "vnext": [
           {
-            "address": "45.192.2.72",
-            "port": 443,
+            "address": "bla-bla-bla-de.anti-zapret.com",
+            "port": 8443,
             "users": [
               {
-                "id": "219762a7-b918-4e2b-8a3d-d309ef98bb61",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
+                "id": "d11613a1-2e1f-eac4-a275-aabd986b7ad1",
+                "encryption": "none"
               }
             ]
           }
@@ -83,10 +82,10 @@
         "network": "tcp",
         "security": "reality",
         "realitySettings": {
-          "serverName": "storage.yandex.net",
-          "fingerprint": "random",
-          "publicKey": "1oUeBtHH4DskTM_jCh-6enWRkFMDX9l1OU5kWYl4kxA",
-          "shortId": "364994a6f61fc955",
+          "serverName": "bla-bla-bla-de.anti-zapret.com",
+          "fingerprint": "firefox",
+          "publicKey": "0AVsyS7udTbxKRdSyQ2rtFC63icDQOVWq8FvAhhU-WY",
+          "shortId": "17faf32cb516c9cb",
           "spiderX": ""
         }
       }
@@ -97,13 +96,12 @@
       "settings": {
         "vnext": [
           {
-            "address": "bridge.sfproxy.fuck-rkn.dev",
-            "port": 443,
+            "address": "45.155.70.125",
+            "port": 8443,
             "users": [
               {
-                "id": "8ff82100-8aad-4281-bf41-f318519d7182",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
+                "id": "d11613a1-2e1f-eac4-a275-aabd986b7ad1",
+                "encryption": "none"
               }
             ]
           }
@@ -113,10 +111,10 @@
         "network": "tcp",
         "security": "reality",
         "realitySettings": {
-          "serverName": "jobinvest.ru",
+          "serverName": "bla-bla-bla-de.anti-zapret.com",
           "fingerprint": "firefox",
-          "publicKey": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-          "shortId": "",
+          "publicKey": "0AVsyS7udTbxKRdSyQ2rtFC63icDQOVWq8FvAhhU-WY",
+          "shortId": "17faf32cb516c9cb",
           "spiderX": ""
         }
       }
@@ -156,11 +154,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "bla-bla-bla-de.anti-zapret.com",
-            "port": 8443,
+            "address": "13.193.205.133",
+            "port": 27407,
             "users": [
               {
-                "id": "d11613a1-2e1f-eac4-a275-aabd986b7ad1",
+                "id": "cd5cf6e7-7ce5-42c9-9316-68210fa72a32",
                 "encryption": "none"
               }
             ]
@@ -171,75 +169,16 @@
         "network": "tcp",
         "security": "reality",
         "realitySettings": {
-          "serverName": "bla-bla-bla-de.anti-zapret.com",
-          "fingerprint": "firefox",
-          "publicKey": "0AVsyS7udTbxKRdSyQ2rtFC63icDQOVWq8FvAhhU-WY",
-          "shortId": "17faf32cb516c9cb",
+          "serverName": "bgcpartners.com",
+          "fingerprint": "chrome",
+          "publicKey": "SajK6LzHBkkFlEXjIwseyqbpezgPiop5ZnSToou3G04",
+          "shortId": "e6ac18b63f23",
           "spiderX": ""
         }
       }
     },
     {
       "tag": "proxy-6",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "bridge.sfproxy.fuck-rkn.dev",
-            "port": 443,
-            "users": [
-              {
-                "id": "8ff82100-8aad-4281-bf41-f318519d7182",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "de.jobinvest.ru",
-          "fingerprint": "firefox",
-          "publicKey": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-          "shortId": "",
-          "spiderX": ""
-        }
-      }
-    },
-    {
-      "tag": "proxy-7",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "45.155.70.125",
-            "port": 8443,
-            "users": [
-              {
-                "id": "d11613a1-2e1f-eac4-a275-aabd986b7ad1",
-                "encryption": "none"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "bla-bla-bla-de.anti-zapret.com",
-          "fingerprint": "firefox",
-          "publicKey": "0AVsyS7udTbxKRdSyQ2rtFC63icDQOVWq8FvAhhU-WY",
-          "shortId": "17faf32cb516c9cb",
-          "spiderX": ""
-        }
-      }
-    },
-    {
-      "tag": "proxy-8",
       "protocol": "vless",
       "settings": {
         "vnext": [
@@ -269,7 +208,7 @@
       }
     },
     {
-      "tag": "proxy-9",
+      "tag": "proxy-7",
       "protocol": "vless",
       "settings": {
         "vnext": [
@@ -299,7 +238,37 @@
       }
     },
     {
-      "tag": "proxy-10",
+      "tag": "proxy-8",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "lit4.freeinternat.com",
+            "port": 443,
+            "users": [
+              {
+                "id": "dabb9a19-03ab-4cdf-8963-d3c45eb0f80d",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "lit4.freeinternat.com",
+          "fingerprint": "firefox",
+          "publicKey": "pgG2grngQEtOFJImLfz0AEm-O2IodM2jCY4aMCYQI1U",
+          "shortId": "6aa2d2e950441a9a",
+          "spiderX": ""
+        }
+      }
+    },
+    {
+      "tag": "proxy-9",
       "protocol": "vless",
       "settings": {
         "vnext": [
@@ -329,16 +298,16 @@
       }
     },
     {
-      "tag": "proxy-11",
+      "tag": "proxy-10",
       "protocol": "vless",
       "settings": {
         "vnext": [
           {
-            "address": "195.49.215.98",
-            "port": 443,
+            "address": "sg2-8sb.6121999.dpdns.org",
+            "port": 19825,
             "users": [
               {
-                "id": "dabb9a19-03ab-4cdf-8963-d3c45eb0f80d",
+                "id": "2d1ad594-80a4-4bfb-87a6-038e39701f51",
                 "encryption": "none",
                 "flow": "xtls-rprx-vision"
               }
@@ -350,69 +319,10 @@
         "network": "tcp",
         "security": "reality",
         "realitySettings": {
-          "serverName": "kz2.freeinternat.com",
-          "fingerprint": "firefox",
-          "publicKey": "bZpzmeWiEJyJQy0W2hHc34Nr6BuFXj1UDd80Cbwh1Fk",
-          "shortId": "ff776ff77be48b88",
-          "spiderX": ""
-        }
-      }
-    },
-    {
-      "tag": "proxy-12",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "13.193.205.133",
-            "port": 27407,
-            "users": [
-              {
-                "id": "cd5cf6e7-7ce5-42c9-9316-68210fa72a32",
-                "encryption": "none"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "bgcpartners.com",
+          "serverName": "sg2-8sb.6121999.dpdns.org",
           "fingerprint": "chrome",
-          "publicKey": "SajK6LzHBkkFlEXjIwseyqbpezgPiop5ZnSToou3G04",
-          "shortId": "e6ac18b63f23",
-          "spiderX": ""
-        }
-      }
-    },
-    {
-      "tag": "proxy-13",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "kz2.freeinternat.com",
-            "port": 443,
-            "users": [
-              {
-                "id": "dabb9a19-03ab-4cdf-8963-d3c45eb0f80d",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "kz2.freeinternat.com",
-          "fingerprint": "random",
-          "publicKey": "bZpzmeWiEJyJQy0W2hHc34Nr6BuFXj1UDd80Cbwh1Fk",
-          "shortId": "ff776ff77be48b88",
+          "publicKey": "GvvkY8xYb9QjvwvzYq_uNC4tOGd0DCxRnz6770-xgkI",
+          "shortId": "6ba85179e30d4fc2",
           "spiderX": ""
         }
       }
