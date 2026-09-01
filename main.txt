@@ -37,11 +37,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "172.235.62.90",
-            "port": 443,
+            "address": "147.182.212.232",
+            "port": 56565,
             "users": [
               {
-                "id": "b98d4c6e-6770-4a31-8256-a4750cdea0e7",
+                "id": "7b188eea-b08f-42c2-bac7-d3b0e74218b8",
                 "encryption": "none",
                 "flow": "xtls-rprx-vision"
               }
@@ -53,40 +53,10 @@
         "network": "tcp",
         "security": "reality",
         "realitySettings": {
-          "serverName": "www.amazon.com",
-          "fingerprint": "firefox",
-          "publicKey": "0i_xAxYgSNx5NMpK2lOaWGS-CvAiD_LneYPO0MF0owo",
-          "shortId": "1a",
-          "spiderX": ""
-        }
-      }
-    },
-    {
-      "tag": "proxy-2",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "t17.qifei.app",
-            "port": 443,
-            "users": [
-              {
-                "id": "b98d4c6e-6770-4a31-8256-a4750cdea0e7",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "www.amazon.com",
-          "fingerprint": "ios",
-          "publicKey": "0i_xAxYgSNx5NMpK2lOaWGS-CvAiD_LneYPO0MF0owo",
-          "shortId": "1a",
+          "serverName": "www.paypal.com",
+          "fingerprint": "chrome",
+          "publicKey": "Td03Ae-cuYLq4xg7MSps58c_yRUcbbwtZLXm0ywabjY",
+          "shortId": "",
           "spiderX": ""
         }
       }
@@ -97,7 +67,7 @@
       "settings": {
         "vnext": [
           {
-            "address": "app17.jarvestip.ru",
+            "address": "app26.jarvestip.ru",
             "port": 443,
             "users": [
               {
@@ -113,10 +83,10 @@
         "network": "tcp",
         "security": "reality",
         "realitySettings": {
-          "serverName": "app17.jarvestip.ru",
+          "serverName": "app26.jarvestip.ru",
           "fingerprint": "firefox",
-          "publicKey": "OINuDFEDTdmtFR8QRxAZfQIMPA-wJxfGN1LjB3TFUHo",
-          "shortId": "535a3304",
+          "publicKey": "c5vsnqZ0Lr_bFoto-ES-3bVD63PwFeogqfc7xTj2rig",
+          "shortId": "3f7fb4ee",
           "spiderX": ""
         }
       }
@@ -127,13 +97,12 @@
       "settings": {
         "vnext": [
           {
-            "address": "50.7.241.228",
-            "port": 443,
+            "address": "206.1.96.49",
+            "port": 37430,
             "users": [
               {
-                "id": "d3815c21-ef06-43e2-82e1-ca313962b489",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
+                "id": "38222a83-76bd-4420-b3f0-5473a9bb0d6e",
+                "encryption": "none"
               }
             ]
           }
@@ -143,10 +112,10 @@
         "network": "tcp",
         "security": "reality",
         "realitySettings": {
-          "serverName": "app27.jarvestip.ru",
-          "fingerprint": "firefox",
-          "publicKey": "OYvSeQqu0XhV12blOVAR2Cn_3m6HI95raTdlqnVobjk",
-          "shortId": "360de9e1",
+          "serverName": "amp-api-edge.apps.apple.com",
+          "fingerprint": "chrome",
+          "publicKey": "RxTaQwnqqU8vxMMvD6AeUTFadLVvwzUplghzVAilAEg",
+          "shortId": "",
           "spiderX": ""
         }
       }
@@ -157,11 +126,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "185.204.171.230",
-            "port": 1819,
+            "address": "46.250.250.149",
+            "port": 2053,
             "users": [
               {
-                "id": "b4a30b6a-2d8d-4652-827e-357d9d720a1e",
+                "id": "8e16742a-78d5-4327-9052-f86a9ce50f49",
                 "encryption": "none"
               }
             ]
@@ -170,11 +139,13 @@
       },
       "streamSettings": {
         "network": "tcp",
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "185.204.171.230",
-          "fingerprint": "chrome",
-          "allowInsecure": false
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "www.apple.com",
+          "fingerprint": "firefox",
+          "publicKey": "SIBS0hevQuPeJiBQUoN5MYq8Gs_ZWyBlkHK6miz__kM",
+          "shortId": "90decc62dab9873f",
+          "spiderX": ""
         }
       }
     },
