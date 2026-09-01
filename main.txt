@@ -67,11 +67,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "72.56.81.75",
+            "address": "t17.qifei.app",
             "port": 443,
             "users": [
               {
-                "id": "2f600710-9f4e-4eab-8de1-89f60a878e55",
+                "id": "b98d4c6e-6770-4a31-8256-a4750cdea0e7",
                 "encryption": "none",
                 "flow": "xtls-rprx-vision"
               }
@@ -83,10 +83,10 @@
         "network": "tcp",
         "security": "reality",
         "realitySettings": {
-          "serverName": "app3.goonars.com",
-          "fingerprint": "firefox",
-          "publicKey": "mHlSdLyCi4y4Bit5YrV9SpNI4RxoC08gyxUJPDy2Ylg",
-          "shortId": "a17b41ba",
+          "serverName": "www.amazon.com",
+          "fingerprint": "ios",
+          "publicKey": "0i_xAxYgSNx5NMpK2lOaWGS-CvAiD_LneYPO0MF0owo",
+          "shortId": "1a",
           "spiderX": ""
         }
       }
@@ -97,37 +97,7 @@
       "settings": {
         "vnext": [
           {
-            "address": "app26.jarvestip.ru",
-            "port": 443,
-            "users": [
-              {
-                "id": "d3815c21-ef06-43e2-82e1-ca313962b489",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "app26.jarvestip.ru",
-          "fingerprint": "firefox",
-          "publicKey": "c5vsnqZ0Lr_bFoto-ES-3bVD63PwFeogqfc7xTj2rig",
-          "shortId": "3f7fb4ee",
-          "spiderX": ""
-        }
-      }
-    },
-    {
-      "tag": "proxy-4",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "50.7.92.251",
+            "address": "app25.jarvestip.ru",
             "port": 443,
             "users": [
               {
@@ -147,6 +117,36 @@
           "fingerprint": "firefox",
           "publicKey": "ojDrVO838PScByjy1cb1-LLEpEh4LhJKG_jldp8g7xo",
           "shortId": "8beb2706",
+          "spiderX": ""
+        }
+      }
+    },
+    {
+      "tag": "proxy-4",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "50.7.193.134",
+            "port": 443,
+            "users": [
+              {
+                "id": "d3815c21-ef06-43e2-82e1-ca313962b489",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "app17.jarvestip.ru",
+          "fingerprint": "firefox",
+          "publicKey": "OINuDFEDTdmtFR8QRxAZfQIMPA-wJxfGN1LjB3TFUHo",
+          "shortId": "535a3304",
           "spiderX": ""
         }
       }
@@ -187,7 +187,67 @@
       "settings": {
         "vnext": [
           {
-            "address": "50.7.95.195",
+            "address": "72.56.75.54",
+            "port": 443,
+            "users": [
+              {
+                "id": "2f600710-9f4e-4eab-8de1-89f60a878e55",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "app2.goonars.com",
+          "fingerprint": "firefox",
+          "publicKey": "iTCQz0n0AolvGxU2ZASJIsSVoKOR9PAFbnZVQDnSnF8",
+          "shortId": "c481d750",
+          "spiderX": ""
+        }
+      }
+    },
+    {
+      "tag": "proxy-7",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "app26.jarvestip.ru",
+            "port": 443,
+            "users": [
+              {
+                "id": "d3815c21-ef06-43e2-82e1-ca313962b489",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "app26.jarvestip.ru",
+          "fingerprint": "firefox",
+          "publicKey": "c5vsnqZ0Lr_bFoto-ES-3bVD63PwFeogqfc7xTj2rig",
+          "shortId": "3f7fb4ee",
+          "spiderX": ""
+        }
+      }
+    },
+    {
+      "tag": "proxy-8",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "app1.jarvestip.ru",
             "port": 443,
             "users": [
               {
@@ -204,7 +264,7 @@
         "security": "reality",
         "realitySettings": {
           "serverName": "app1.jarvestip.ru",
-          "fingerprint": "firefox",
+          "fingerprint": "qq",
           "publicKey": "8HYqDHdQ1IuLPhAOENT70_j0prAi1PNkwlT6venYAEM",
           "shortId": "a78da1f7",
           "spiderX": ""
@@ -212,7 +272,67 @@
       }
     },
     {
-      "tag": "proxy-7",
+      "tag": "proxy-9",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "50.7.92.251",
+            "port": 443,
+            "users": [
+              {
+                "id": "d3815c21-ef06-43e2-82e1-ca313962b489",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "app25.jarvestip.ru",
+          "fingerprint": "firefox",
+          "publicKey": "ojDrVO838PScByjy1cb1-LLEpEh4LhJKG_jldp8g7xo",
+          "shortId": "8beb2706",
+          "spiderX": ""
+        }
+      }
+    },
+    {
+      "tag": "proxy-10",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "app47.jarvestip.ru",
+            "port": 443,
+            "users": [
+              {
+                "id": "d3815c21-ef06-43e2-82e1-ca313962b489",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "app47.jarvestip.ru",
+          "fingerprint": "qq",
+          "publicKey": "2e9dGid5D-e4demAVGqU71uEeusuBhviikchaJ96E3o",
+          "shortId": "8ece2039",
+          "spiderX": ""
+        }
+      }
+    },
+    {
+      "tag": "proxy-11",
       "protocol": "vless",
       "settings": {
         "vnext": [
@@ -242,16 +362,76 @@
       }
     },
     {
-      "tag": "proxy-8",
+      "tag": "proxy-12",
       "protocol": "vless",
       "settings": {
         "vnext": [
           {
-            "address": "46.250.240.80",
+            "address": "151.242.168.155",
+            "port": 443,
+            "users": [
+              {
+                "id": "43ca296b-321f-4b61-a12c-ddf8370b9761",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "kibi-institut.de",
+          "fingerprint": "firefox",
+          "publicKey": "mWzXDVWUhjGcuizZHA-rEnRpxv2wgeSZUIuHmQdteiA",
+          "shortId": "f576da5e05a1d4d2",
+          "spiderX": ""
+        }
+      }
+    },
+    {
+      "tag": "proxy-13",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "31.77.220.183",
+            "port": 1443,
+            "users": [
+              {
+                "id": "6379673b-197f-4944-ba81-a45c66aefe9c",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "fi.aeternavpn.space",
+          "fingerprint": "firefox",
+          "publicKey": "HNjZe5pYUhcuE8sASYVVrVSMW_jFfekgLnrnO4xXIyQ",
+          "shortId": "a1b2c3d4",
+          "spiderX": ""
+        }
+      }
+    },
+    {
+      "tag": "proxy-14",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "46.250.250.149",
             "port": 2053,
             "users": [
               {
-                "id": "f2816a01-3555-4e79-9e26-770f050ea55a",
+                "id": "8e16742a-78d5-4327-9052-f86a9ce50f49",
                 "encryption": "none"
               }
             ]
@@ -264,14 +444,14 @@
         "realitySettings": {
           "serverName": "www.apple.com",
           "fingerprint": "firefox",
-          "publicKey": "bRDaP068YgdwwdQgenUvKTNfPjIB_Dy-lJDFC9ZZEXU",
-          "shortId": "632a146bd581641a",
+          "publicKey": "SIBS0hevQuPeJiBQUoN5MYq8Gs_ZWyBlkHK6miz__kM",
+          "shortId": "90decc62dab9873f",
           "spiderX": ""
         }
       }
     },
     {
-      "tag": "proxy-9",
+      "tag": "proxy-16",
       "protocol": "vless",
       "settings": {
         "vnext": [
@@ -300,16 +480,74 @@
       }
     },
     {
-      "tag": "proxy-10",
+      "tag": "proxy-17",
       "protocol": "vless",
       "settings": {
         "vnext": [
           {
-            "address": "72.56.75.54",
-            "port": 443,
+            "address": "46.250.240.80",
+            "port": 2053,
             "users": [
               {
-                "id": "2f600710-9f4e-4eab-8de1-89f60a878e55",
+                "id": "f2816a01-3555-4e79-9e26-770f050ea55a",
+                "encryption": "none"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "www.apple.com",
+          "fingerprint": "firefox",
+          "publicKey": "bRDaP068YgdwwdQgenUvKTNfPjIB_Dy-lJDFC9ZZEXU",
+          "shortId": "632a146bd581641a",
+          "spiderX": ""
+        }
+      }
+    },
+    {
+      "tag": "proxy-19",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "217.217.254.126",
+            "port": 2053,
+            "users": [
+              {
+                "id": "30430ca4-9a16-4689-a276-4014599d2f39",
+                "encryption": "none"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "www.apple.com",
+          "fingerprint": "firefox",
+          "publicKey": "yVb3JqVqlnXhiIb3E-gAVvgsXCpWgoeLIAJau9yuZ1I",
+          "shortId": "3fc9b11ceeb2cc6b",
+          "spiderX": ""
+        }
+      }
+    },
+    {
+      "tag": "proxy-20",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "138.2.94.44",
+            "port": 8899,
+            "users": [
+              {
+                "id": "ca9cec48-bc34-4d6e-92d5-d0cd56150e51",
                 "encryption": "none",
                 "flow": "xtls-rprx-vision"
               }
@@ -321,11 +559,68 @@
         "network": "tcp",
         "security": "reality",
         "realitySettings": {
-          "serverName": "app2.goonars.com",
-          "fingerprint": "firefox",
-          "publicKey": "iTCQz0n0AolvGxU2ZASJIsSVoKOR9PAFbnZVQDnSnF8",
-          "shortId": "c481d750",
+          "serverName": "www.lovelive-anime.jp",
+          "fingerprint": "ios",
+          "publicKey": "-kGaCYGM_MImDMVkOsFp4yvv4dLy3FXe9gqAtf4eYF8",
+          "shortId": "905ae32a",
           "spiderX": ""
+        }
+      }
+    },
+    {
+      "tag": "proxy-21",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "165.154.55.105",
+            "port": 20984,
+            "users": [
+              {
+                "id": "e0aafde7-37e2-486b-eb30-efa71166bf7e",
+                "encryption": "none"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "dl.google.com",
+          "fingerprint": "chrome",
+          "publicKey": "Ns3J1Dc0WBSu560uhGwDfn1kic7IZm3ZHggSpExhyRo",
+          "shortId": "",
+          "spiderX": ""
+        }
+      }
+    },
+    {
+      "tag": "proxy-22",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "5.83.129.124",
+            "port": 443,
+            "users": [
+              {
+                "id": "a9aceeb9-17cc-470e-a03b-b7c3ee0f9f14",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "50gport3.potatosubge20.org",
+          "fingerprint": "firefox",
+          "allowInsecure": false
         }
       }
     },
