@@ -95,11 +95,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "147.45.61.188",
+            "address": "46.28.65.153",
             "port": 443,
             "users": [
               {
-                "id": "5999a497-a2da-41d0-92cb-5b758082f83c",
+                "id": "f1904bfb-3903-4949-814a-e1053a918e34",
                 "encryption": "none",
                 "flow": "xtls-rprx-vision"
               }
@@ -109,11 +109,13 @@
       },
       "streamSettings": {
         "network": "tcp",
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "som3.api3-max.ru",
-          "fingerprint": "firefox",
-          "allowInsecure": false
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "www.cloudflare.com",
+          "fingerprint": "chrome",
+          "publicKey": "45xYuYgCIILK5XYvV_D13LJWvCKuoipdKzDfaEBZuW8",
+          "shortId": "1df5faea50efd4fc",
+          "spiderX": ""
         }
       }
     },
@@ -151,36 +153,6 @@
       "settings": {
         "vnext": [
           {
-            "address": "46.28.65.153",
-            "port": 443,
-            "users": [
-              {
-                "id": "f1904bfb-3903-4949-814a-e1053a918e34",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "www.cloudflare.com",
-          "fingerprint": "chrome",
-          "publicKey": "45xYuYgCIILK5XYvV_D13LJWvCKuoipdKzDfaEBZuW8",
-          "shortId": "1df5faea50efd4fc",
-          "spiderX": ""
-        }
-      }
-    },
-    {
-      "tag": "proxy-6",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
             "address": "147.45.61.190",
             "port": 443,
             "users": [
@@ -204,16 +176,16 @@
       }
     },
     {
-      "tag": "proxy-7",
+      "tag": "proxy-6",
       "protocol": "vless",
       "settings": {
         "vnext": [
           {
-            "address": "50.7.33.218",
-            "port": 443,
+            "address": "78.159.247.166",
+            "port": 7444,
             "users": [
               {
-                "id": "252f7811-d86f-4dc2-97e0-83d3172ef4b8",
+                "id": "0764541b-3e57-4b47-954b-51e996fae5fc",
                 "encryption": "none",
                 "flow": "xtls-rprx-vision"
               }
@@ -225,16 +197,16 @@
         "network": "tcp",
         "security": "reality",
         "realitySettings": {
-          "serverName": "edge-fr2.mystatic-cdn.ru",
+          "serverName": "akamai.com",
           "fingerprint": "firefox",
-          "publicKey": "ZZwdN1Lt-fIR8A4Y1NbYCCEI6th2YXYHHRLHraVXyn0",
-          "shortId": "72461ccce5373103",
+          "publicKey": "-P8DgKISSG4jnLuj6ihZDqZs1_zt-juBrhVhTylHiAo",
+          "shortId": "",
           "spiderX": ""
         }
       }
     },
     {
-      "tag": "proxy-8",
+      "tag": "proxy-7",
       "protocol": "vless",
       "settings": {
         "vnext": [
@@ -264,16 +236,16 @@
       }
     },
     {
-      "tag": "proxy-9",
+      "tag": "proxy-8",
       "protocol": "vless",
       "settings": {
         "vnext": [
           {
-            "address": "ww3.levikogjgfdd.ir",
+            "address": "45.128.78.6",
             "port": 443,
             "users": [
               {
-                "id": "b81b4d1b-7f20-48f1-82dc-d24bef898cab",
+                "id": "2ae1bbd2-dd81-4737-bbec-6a8c1c74e8f1",
                 "encryption": "none",
                 "flow": "xtls-rprx-vision"
               }
@@ -285,25 +257,25 @@
         "network": "tcp",
         "security": "reality",
         "realitySettings": {
-          "serverName": "passport.yandex.ru",
-          "fingerprint": "chrome",
-          "publicKey": "33zaT3jHXjtynSQ0Ucw9bK92-XH2zolJmuIeZ1XyZB0",
-          "shortId": "e6",
+          "serverName": "sellflow.org",
+          "fingerprint": "firefox",
+          "publicKey": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+          "shortId": "",
           "spiderX": ""
         }
       }
     },
     {
-      "tag": "proxy-10",
+      "tag": "proxy-9",
       "protocol": "vless",
       "settings": {
         "vnext": [
           {
-            "address": "70.34.207.141",
-            "port": 443,
+            "address": "78.159.247.123",
+            "port": 7444,
             "users": [
               {
-                "id": "975711ee-108d-4d0c-94a7-767ea445e62a",
+                "id": "0764541b-3e57-4b47-954b-51e996fae5fc",
                 "encryption": "none",
                 "flow": "xtls-rprx-vision"
               }
@@ -315,10 +287,10 @@
         "network": "tcp",
         "security": "reality",
         "realitySettings": {
-          "serverName": "www.lovelive-anime.jp",
+          "serverName": "akamai.com",
           "fingerprint": "firefox",
-          "publicKey": "EtKRG8sxUJsdy-KwUOtYUNJnSn5VMx2sfKvvdpzg2X0",
-          "shortId": "f0eb800bd980b00b",
+          "publicKey": "-P8DgKISSG4jnLuj6ihZDqZs1_zt-juBrhVhTylHiAo",
+          "shortId": "",
           "spiderX": ""
         }
       }
