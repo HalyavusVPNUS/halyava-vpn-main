@@ -37,11 +37,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "31.77.220.184",
-            "port": 7443,
+            "address": "conver.trosty.online",
+            "port": 443,
             "users": [
               {
-                "id": "5a92a9d2-3067-49cd-bfc5-989bbdfc5d52",
+                "id": "b10e8a5b-82bd-4040-935d-6462eaf4f78e",
                 "encryption": "none",
                 "flow": "xtls-rprx-vision"
               }
@@ -53,10 +53,10 @@
         "network": "tcp",
         "security": "reality",
         "realitySettings": {
-          "serverName": "hotcoals.aeternavpn.space",
+          "serverName": "conver.trosty.online",
           "fingerprint": "firefox",
-          "publicKey": "RWu6ktBE4DFbUz_prmz-5KuolLhO53ehh19mNxhP-wI",
-          "shortId": "a1b2c3d4",
+          "publicKey": "HnGwAIVDhVivrEB4vw-oXfMe8jVUvJ9LngyJRei9yz8",
+          "shortId": "",
           "spiderX": ""
         }
       }
@@ -67,40 +67,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "87.58.152.18",
-            "port": 8443,
+            "address": "the.trosty.online",
+            "port": 443,
             "users": [
               {
-                "id": "fe73f296-e5c0-45a6-8064-f8e76a75e946",
-                "encryption": "none"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "amp-api-edge.apps.apple.com",
-          "fingerprint": "safari",
-          "publicKey": "v-y8lgU3a2wSMalMiBveBtwHLwqW4WWTOgUoMNNBKFQ",
-          "shortId": "c0dc8d7fda62ee7f",
-          "spiderX": ""
-        }
-      }
-    },
-    {
-      "tag": "proxy-3",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "78.159.247.123",
-            "port": 7444,
-            "users": [
-              {
-                "id": "0764541b-3e57-4b47-954b-51e996fae5fc",
+                "id": "b10e8a5b-82bd-4040-935d-6462eaf4f78e",
                 "encryption": "none",
                 "flow": "xtls-rprx-vision"
               }
@@ -112,10 +83,10 @@
         "network": "tcp",
         "security": "reality",
         "realitySettings": {
-          "serverName": "akamai.com",
+          "serverName": "the.trosty.online",
           "fingerprint": "firefox",
-          "publicKey": "-P8DgKISSG4jnLuj6ihZDqZs1_zt-juBrhVhTylHiAo",
-          "shortId": "",
+          "publicKey": "2pDJP5r7usL4GI692E5GhLtzIHyXJhCwJv9GKCTlGhU",
+          "shortId": "8c1765cd5a32f377",
           "spiderX": ""
         }
       }
