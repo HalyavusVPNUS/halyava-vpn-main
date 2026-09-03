@@ -32,6 +32,95 @@
   ],
   "outbounds": [
     {
+      "tag": "proxy-1",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "31.77.220.184",
+            "port": 7443,
+            "users": [
+              {
+                "id": "5a92a9d2-3067-49cd-bfc5-989bbdfc5d52",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "hotcoals.aeternavpn.space",
+          "fingerprint": "firefox",
+          "publicKey": "RWu6ktBE4DFbUz_prmz-5KuolLhO53ehh19mNxhP-wI",
+          "shortId": "a1b2c3d4",
+          "spiderX": ""
+        }
+      }
+    },
+    {
+      "tag": "proxy-2",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "87.58.152.18",
+            "port": 8443,
+            "users": [
+              {
+                "id": "fe73f296-e5c0-45a6-8064-f8e76a75e946",
+                "encryption": "none"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "amp-api-edge.apps.apple.com",
+          "fingerprint": "safari",
+          "publicKey": "v-y8lgU3a2wSMalMiBveBtwHLwqW4WWTOgUoMNNBKFQ",
+          "shortId": "c0dc8d7fda62ee7f",
+          "spiderX": ""
+        }
+      }
+    },
+    {
+      "tag": "proxy-3",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "78.159.247.123",
+            "port": 7444,
+            "users": [
+              {
+                "id": "0764541b-3e57-4b47-954b-51e996fae5fc",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "akamai.com",
+          "fingerprint": "firefox",
+          "publicKey": "-P8DgKISSG4jnLuj6ihZDqZs1_zt-juBrhVhTylHiAo",
+          "shortId": "",
+          "spiderX": ""
+        }
+      }
+    },
+    {
       "tag": "direct",
       "protocol": "freedom"
     },
