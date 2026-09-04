@@ -37,11 +37,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "alca.foff.ch",
+            "address": "95.85.224.182",
             "port": 443,
             "users": [
               {
-                "id": "6db6b948-655f-4f68-a9e7-865050e05b31",
+                "id": "ec972f43-cdfa-4d88-a020-64e17eeabc99",
                 "encryption": "none",
                 "flow": "xtls-rprx-vision"
               }
@@ -53,10 +53,10 @@
         "network": "tcp",
         "security": "reality",
         "realitySettings": {
-          "serverName": "alca.foff.ch",
-          "fingerprint": "edge",
-          "publicKey": "BS25qHJWxx0kqrcrnA41jOx9HSZTyRVs9tLx-R66oQ4",
-          "shortId": "9a8df4ee3fdf",
+          "serverName": "node-8ad7f4.vless.monster",
+          "fingerprint": "firefox",
+          "publicKey": "lLYa5X7c1z2ohksMD9D1AQolB-QdKdoRc7Ki9Mgqpwo",
+          "shortId": "fb70848a3d2ec812",
           "spiderX": ""
         }
       }
@@ -67,11 +67,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "31.76.113.20",
+            "address": "31.56.187.115",
             "port": 443,
             "users": [
               {
-                "id": "6db6b948-655f-4f68-a9e7-865050e05b31",
+                "id": "ec972f43-cdfa-4d88-a020-64e17eeabc99",
                 "encryption": "none",
                 "flow": "xtls-rprx-vision"
               }
@@ -83,10 +83,39 @@
         "network": "tcp",
         "security": "reality",
         "realitySettings": {
-          "serverName": "free-exp.kyras.pw",
+          "serverName": "node-4f4514.vless.monster",
           "fingerprint": "firefox",
-          "publicKey": "k1Gtkk9ylyyq8hzuabnRmGn_H5tmRghWkKZfgEg7KVM",
-          "shortId": "b4e1",
+          "publicKey": "mqFvroWd8MerzWYwmcG13KFXr-i5AAZtcSF20yigKg4",
+          "shortId": "dccd78904a78bfd3",
+          "spiderX": ""
+        }
+      }
+    },
+    {
+      "tag": "proxy-3",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "hinet1.2yly.com",
+            "port": 24215,
+            "users": [
+              {
+                "id": "19d5a678-8396-4e3b-93da-ece618d0e83a",
+                "encryption": "none"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "addons.mozilla.org",
+          "fingerprint": "chrome",
+          "publicKey": "mdWKUPMVTtTbDqK10BPb89OcqBC2-Lx-4NOYtqc1GWE",
+          "shortId": "",
           "spiderX": ""
         }
       }
