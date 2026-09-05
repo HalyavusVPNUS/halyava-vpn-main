@@ -37,40 +37,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "38.127.121.44",
-            "port": 53856,
-            "users": [
-              {
-                "id": "3ab5119a-d0e9-4feb-c748-2b42b7367d21",
-                "encryption": "none"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "www.speedtest.net",
-          "fingerprint": "chrome",
-          "publicKey": "rwpbqas_HY8knlW0fFSIeUrjgBXHBzSNboflsLD8elA",
-          "shortId": "",
-          "spiderX": ""
-        }
-      }
-    },
-    {
-      "tag": "proxy-2",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "eu-central-de-1.hanvpn.biz",
+            "address": "172.235.62.90",
             "port": 443,
             "users": [
               {
-                "id": "d9d0f208-d582-41d5-bb7b-742671402810",
+                "id": "b98d4c6e-6770-4a31-8256-a4750cdea0e7",
                 "encryption": "none",
                 "flow": "xtls-rprx-vision"
               }
@@ -82,16 +53,16 @@
         "network": "tcp",
         "security": "reality",
         "realitySettings": {
-          "serverName": "eu-central-de-1.hanvpn.biz",
-          "fingerprint": "chrome",
-          "publicKey": "B2ZW-mosEf8Cz4PYahKxn_B4Qa3yDZ9qFG7uLan-ngQ",
-          "shortId": "0183b7681806bc97",
+          "serverName": "www.amazon.com",
+          "fingerprint": "firefox",
+          "publicKey": "0i_xAxYgSNx5NMpK2lOaWGS-CvAiD_LneYPO0MF0owo",
+          "shortId": "1a",
           "spiderX": ""
         }
       }
     },
     {
-      "tag": "proxy-3",
+      "tag": "proxy-2",
       "protocol": "vless",
       "settings": {
         "vnext": [
@@ -118,43 +89,16 @@
       }
     },
     {
-      "tag": "proxy-4",
+      "tag": "proxy-3",
       "protocol": "vless",
       "settings": {
         "vnext": [
           {
-            "address": "38.175.203.11",
-            "port": 443,
+            "address": "54.180.101.47",
+            "port": 8686,
             "users": [
               {
-                "id": "1b8ec962-6e6f-4fc3-a9a4-c8a6fc907796",
-                "encryption": "none"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "oulucloud.706666.xyz",
-          "fingerprint": "chrome",
-          "allowInsecure": false
-        }
-      }
-    },
-    {
-      "tag": "proxy-5",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "static.onevanet.ir",
-            "port": 28239,
-            "users": [
-              {
-                "id": "9a63e187-592b-4940-b75a-d5b41c7896de",
+                "id": "1a17b19d-4896-4531-af79-6e91d8ef8228",
                 "encryption": "none"
               }
             ]
@@ -165,68 +109,10 @@
         "network": "tcp",
         "security": "reality",
         "realitySettings": {
-          "serverName": "amp-api-edge.apps.apple.com",
+          "serverName": "www.apple.com",
           "fingerprint": "chrome",
-          "publicKey": "RVqny9xY821kUGqKQMzAWHeWjt_OrYw2Hn5poqH0lAs",
-          "shortId": "6318bc577da67e29",
-          "spiderX": ""
-        }
-      }
-    },
-    {
-      "tag": "proxy-6",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "static.onevanet.ir",
-            "port": 28239,
-            "users": [
-              {
-                "id": "4b8c2c33-6ac5-4123-9ba0-570256eeb06c",
-                "encryption": "none"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "amp-api-edge.apps.apple.com",
-          "fingerprint": "chrome",
-          "publicKey": "RVqny9xY821kUGqKQMzAWHeWjt_OrYw2Hn5poqH0lAs",
-          "shortId": "6318bc577da67e29",
-          "spiderX": ""
-        }
-      }
-    },
-    {
-      "tag": "proxy-7",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "static.onevanet.ir",
-            "port": 28239,
-            "users": [
-              {
-                "id": "0814ee8a-0575-491b-8565-eaedadcce6fc",
-                "encryption": "none"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "amp-api-edge.apps.apple.com",
-          "fingerprint": "chrome",
-          "publicKey": "RVqny9xY821kUGqKQMzAWHeWjt_OrYw2Hn5poqH0lAs",
-          "shortId": "6318bc577da67e29",
+          "publicKey": "A3NXnUIT-W0m1Y_leRnv5so2IeCvk9FCFgL31PulfTw",
+          "shortId": "628b3c90c98ead4f",
           "spiderX": ""
         }
       }
