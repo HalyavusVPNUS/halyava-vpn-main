@@ -66,6 +66,36 @@
       "settings": {
         "vnext": [
           {
+            "address": "eu-central-de-1.hanvpn.biz",
+            "port": 443,
+            "users": [
+              {
+                "id": "d9d0f208-d582-41d5-bb7b-742671402810",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "eu-central-de-1.hanvpn.biz",
+          "fingerprint": "chrome",
+          "publicKey": "B2ZW-mosEf8Cz4PYahKxn_B4Qa3yDZ9qFG7uLan-ngQ",
+          "shortId": "0183b7681806bc97",
+          "spiderX": ""
+        }
+      }
+    },
+    {
+      "tag": "proxy-3",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
             "address": "195.162.69.203",
             "port": 8443,
             "users": [
@@ -84,6 +114,120 @@
           "serverName": "195-162-69-203.sslip.io",
           "fingerprint": "firefox",
           "allowInsecure": false
+        }
+      }
+    },
+    {
+      "tag": "proxy-4",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "38.175.203.11",
+            "port": 443,
+            "users": [
+              {
+                "id": "1b8ec962-6e6f-4fc3-a9a4-c8a6fc907796",
+                "encryption": "none"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "oulucloud.706666.xyz",
+          "fingerprint": "chrome",
+          "allowInsecure": false
+        }
+      }
+    },
+    {
+      "tag": "proxy-5",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "static.onevanet.ir",
+            "port": 28239,
+            "users": [
+              {
+                "id": "9a63e187-592b-4940-b75a-d5b41c7896de",
+                "encryption": "none"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "amp-api-edge.apps.apple.com",
+          "fingerprint": "chrome",
+          "publicKey": "RVqny9xY821kUGqKQMzAWHeWjt_OrYw2Hn5poqH0lAs",
+          "shortId": "6318bc577da67e29",
+          "spiderX": ""
+        }
+      }
+    },
+    {
+      "tag": "proxy-6",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "static.onevanet.ir",
+            "port": 28239,
+            "users": [
+              {
+                "id": "4b8c2c33-6ac5-4123-9ba0-570256eeb06c",
+                "encryption": "none"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "amp-api-edge.apps.apple.com",
+          "fingerprint": "chrome",
+          "publicKey": "RVqny9xY821kUGqKQMzAWHeWjt_OrYw2Hn5poqH0lAs",
+          "shortId": "6318bc577da67e29",
+          "spiderX": ""
+        }
+      }
+    },
+    {
+      "tag": "proxy-7",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "static.onevanet.ir",
+            "port": 28239,
+            "users": [
+              {
+                "id": "0814ee8a-0575-491b-8565-eaedadcce6fc",
+                "encryption": "none"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "amp-api-edge.apps.apple.com",
+          "fingerprint": "chrome",
+          "publicKey": "RVqny9xY821kUGqKQMzAWHeWjt_OrYw2Hn5poqH0lAs",
+          "shortId": "6318bc577da67e29",
+          "spiderX": ""
         }
       }
     },
