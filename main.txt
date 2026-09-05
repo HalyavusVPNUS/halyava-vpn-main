@@ -37,13 +37,12 @@
       "settings": {
         "vnext": [
           {
-            "address": "193.111.117.61",
-            "port": 443,
+            "address": "38.127.121.44",
+            "port": 53856,
             "users": [
               {
-                "id": "1b5e85e9-fda3-4738-8ff1-1696b2bc994d",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
+                "id": "3ab5119a-d0e9-4feb-c748-2b42b7367d21",
+                "encryption": "none"
               }
             ]
           }
@@ -53,11 +52,38 @@
         "network": "tcp",
         "security": "reality",
         "realitySettings": {
-          "serverName": "poland.whiteconnect.lol",
-          "fingerprint": "firefox",
-          "publicKey": "Cve6RU_xmFPAsLiW2eIucli0lwEZyf7XFj6_rR8LukI",
-          "shortId": "671047edbaa38eef",
+          "serverName": "www.speedtest.net",
+          "fingerprint": "chrome",
+          "publicKey": "rwpbqas_HY8knlW0fFSIeUrjgBXHBzSNboflsLD8elA",
+          "shortId": "",
           "spiderX": ""
+        }
+      }
+    },
+    {
+      "tag": "proxy-2",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "195.162.69.203",
+            "port": 8443,
+            "users": [
+              {
+                "id": "953358cb-82ba-4296-960d-6d2ec3468f4c",
+                "encryption": "none"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "195-162-69-203.sslip.io",
+          "fingerprint": "firefox",
+          "allowInsecure": false
         }
       }
     },
