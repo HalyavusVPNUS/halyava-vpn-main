@@ -37,37 +37,7 @@
       "settings": {
         "vnext": [
           {
-            "address": "nl1.dzen-services.com",
-            "port": 443,
-            "users": [
-              {
-                "id": "0afcdc48-917d-47e8-8adb-cbe6908baede",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "nl1.dzen-services.com",
-          "fingerprint": "chrome",
-          "publicKey": "xgjh4INLejIsR8DCnlOOKV9nK6fKIg1TtB5hhYfahhs",
-          "shortId": "81ea",
-          "spiderX": ""
-        }
-      }
-    },
-    {
-      "tag": "proxy-2",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "50.7.182.18",
+            "address": "at3.moritech.net",
             "port": 443,
             "users": [
               {
@@ -83,8 +53,36 @@
         "network": "tcp",
         "security": "tls",
         "tlsSettings": {
-          "serverName": "viper-20.moriarty-web.com",
-          "fingerprint": "chrome",
+          "serverName": "at3.moritech.net",
+          "fingerprint": "firefox",
+          "allowInsecure": false
+        }
+      }
+    },
+    {
+      "tag": "proxy-2",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "50.7.184.122",
+            "port": 443,
+            "users": [
+              {
+                "id": "cd3bb7d9-7df3-4644-ac05-c260990ac277",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "at3.moritech.net",
+          "fingerprint": "firefox",
           "allowInsecure": false
         }
       }
@@ -123,7 +121,7 @@
       "settings": {
         "vnext": [
           {
-            "address": "50.7.184.122",
+            "address": "144.31.5.3",
             "port": 443,
             "users": [
               {
@@ -139,64 +137,8 @@
         "network": "tcp",
         "security": "tls",
         "tlsSettings": {
-          "serverName": "at3.moritech.net",
+          "serverName": "pl4.moritech.net",
           "fingerprint": "firefox",
-          "allowInsecure": false
-        }
-      }
-    },
-    {
-      "tag": "proxy-5",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "50.7.184.122",
-            "port": 443,
-            "users": [
-              {
-                "id": "cd3bb7d9-7df3-4644-ac05-c260990ac277",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "at3.moritech.net",
-          "fingerprint": "ios",
-          "allowInsecure": false
-        }
-      }
-    },
-    {
-      "tag": "proxy-6",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "144.31.5.90",
-            "port": 443,
-            "users": [
-              {
-                "id": "cd3bb7d9-7df3-4644-ac05-c260990ac277",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "pl5.moritech.net",
-          "fingerprint": "safari",
           "allowInsecure": false
         }
       }
