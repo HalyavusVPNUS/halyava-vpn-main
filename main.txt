@@ -95,7 +95,7 @@
       "settings": {
         "vnext": [
           {
-            "address": "viper-21.moriarty-web.com",
+            "address": "50.7.249.170",
             "port": 443,
             "users": [
               {
@@ -111,8 +111,8 @@
         "network": "tcp",
         "security": "tls",
         "tlsSettings": {
-          "serverName": "viper-21.moriarty-web.com",
-          "fingerprint": "chrome",
+          "serverName": "pl1-ded.moritech.net",
+          "fingerprint": "firefox",
           "allowInsecure": false
         }
       }
@@ -123,7 +123,7 @@
       "settings": {
         "vnext": [
           {
-            "address": "50.7.226.173",
+            "address": "50.7.249.170",
             "port": 443,
             "users": [
               {
@@ -139,8 +139,8 @@
         "network": "tcp",
         "security": "tls",
         "tlsSettings": {
-          "serverName": "viper-21.moriarty-web.com",
-          "fingerprint": "firefox",
+          "serverName": "pl1-ded.moritech.net",
+          "fingerprint": "chrome",
           "allowInsecure": false
         }
       }
@@ -151,11 +151,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "103.91.147.17",
+            "address": "2.26.3.88",
             "port": 443,
             "users": [
               {
-                "id": "db9da8fb-c528-42ec-9b9e-e578cf934c04",
+                "id": "ca19c24a-e5ec-45f8-8cd1-c97d84da5e35",
                 "encryption": "none",
                 "flow": "xtls-rprx-vision"
               }
@@ -167,9 +167,9 @@
         "network": "tcp",
         "security": "reality",
         "realitySettings": {
-          "serverName": "sellflow.org",
+          "serverName": "fi.oblaco.bet",
           "fingerprint": "firefox",
-          "publicKey": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+          "publicKey": "mJ-0fJDvKp0rhuyUvs1bw4RasRRM-BEOAl9iAZ8gXy0",
           "shortId": "",
           "spiderX": ""
         }
@@ -177,6 +177,35 @@
     },
     {
       "tag": "proxy-6",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "freshjuniper.download",
+            "port": 443,
+            "users": [
+              {
+                "id": "6429d27e-a7d4-4e04-ae57-e88243fbbfe3",
+                "encryption": "none"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "localhost",
+          "fingerprint": "chrome",
+          "publicKey": "F2VfBr2UmjDTErB_oruvW5aIvzH_xGfM2AW5_w-DF0I",
+          "shortId": "",
+          "spiderX": ""
+        }
+      }
+    },
+    {
+      "tag": "proxy-7",
       "protocol": "vless",
       "settings": {
         "vnext": [
@@ -206,46 +235,18 @@
       }
     },
     {
-      "tag": "proxy-7",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "freshjuniper.download",
-            "port": 443,
-            "users": [
-              {
-                "id": "6429d27e-a7d4-4e04-ae57-e88243fbbfe3",
-                "encryption": "none"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "localhost",
-          "fingerprint": "chrome",
-          "publicKey": "F2VfBr2UmjDTErB_oruvW5aIvzH_xGfM2AW5_w-DF0I",
-          "shortId": "",
-          "spiderX": ""
-        }
-      }
-    },
-    {
       "tag": "proxy-8",
       "protocol": "vless",
       "settings": {
         "vnext": [
           {
-            "address": "spser1.mechanicir.ir",
-            "port": 53719,
+            "address": "78.159.247.153",
+            "port": 443,
             "users": [
               {
-                "id": "251e9d36-3eec-474f-9eb8-fe508e28ced6",
-                "encryption": "none"
+                "id": "0764541b-3e57-4b47-954b-51e996fae5fc",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
               }
             ]
           }
@@ -255,10 +256,10 @@
         "network": "tcp",
         "security": "reality",
         "realitySettings": {
-          "serverName": "play-fe.googleapis.com",
-          "fingerprint": "chrome",
-          "publicKey": "9XG-o5CJH3_h4x6FDeGs-JsE1LzyJSyw5d-xi6LvVTc",
-          "shortId": "5d1caa44e652126d",
+          "serverName": "on.mcufa.pro",
+          "fingerprint": "firefox",
+          "publicKey": "-P8DgKISSG4jnLuj6ihZDqZs1_zt-juBrhVhTylHiAo",
+          "shortId": "",
           "spiderX": ""
         }
       }
@@ -269,11 +270,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "50.7.249.170",
+            "address": "212.192.13.233",
             "port": 443,
             "users": [
               {
-                "id": "cd3bb7d9-7df3-4644-ac05-c260990ac277",
+                "id": "d742752c-4231-4695-801e-f06d77f0f277",
                 "encryption": "none",
                 "flow": "xtls-rprx-vision"
               }
@@ -283,44 +284,18 @@
       },
       "streamSettings": {
         "network": "tcp",
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "pl1-ded.moritech.net",
-          "fingerprint": "chrome",
-          "allowInsecure": false
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "www.cathaypacific.com",
+          "fingerprint": "firefox",
+          "publicKey": "O8Av8GXWVqj7FOxUyStmrTLWv5EtvQ1ZnMOVVLb1V3s",
+          "shortId": "1bc2c1ef1c",
+          "spiderX": ""
         }
       }
     },
     {
       "tag": "proxy-10",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "50.7.249.170",
-            "port": 443,
-            "users": [
-              {
-                "id": "cd3bb7d9-7df3-4644-ac05-c260990ac277",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "pl1-ded.moritech.net",
-          "fingerprint": "firefox",
-          "allowInsecure": false
-        }
-      }
-    },
-    {
-      "tag": "proxy-11",
       "protocol": "vless",
       "settings": {
         "vnext": [
