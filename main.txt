@@ -37,12 +37,13 @@
       "settings": {
         "vnext": [
           {
-            "address": "107.173.237.146",
-            "port": 8443,
+            "address": "88.216.195.13",
+            "port": 443,
             "users": [
               {
-                "id": "1d39f715-2740-4d99-bc3b-197cc48dcee7",
-                "encryption": "none"
+                "id": "3c48b5f5-7766-4896-874e-b3ba1860e83a",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
               }
             ]
           }
@@ -52,10 +53,10 @@
         "network": "tcp",
         "security": "reality",
         "realitySettings": {
-          "serverName": "updates.cdn-apple.com",
-          "fingerprint": "chrome",
-          "publicKey": "D3ojIs3AUKP_tV0E4TEjh90HBVJp24Nq3qMfdxD30kc",
-          "shortId": "df8611c07d",
+          "serverName": "w-mebel.pro",
+          "fingerprint": "firefox",
+          "publicKey": "4VzPARgETZ4lJIffknTNqmfkP567FqYV94A18Be8vxQ",
+          "shortId": "837f454e9c8a7e19",
           "spiderX": ""
         }
       }
@@ -82,7 +83,7 @@
         "security": "reality",
         "realitySettings": {
           "serverName": "updates.cdn-apple.com",
-          "fingerprint": "chrome",
+          "fingerprint": "firefox",
           "publicKey": "D3ojIs3AUKP_tV0E4TEjh90HBVJp24Nq3qMfdxD30kc",
           "shortId": "df8611c07d",
           "spiderX": ""
@@ -95,13 +96,12 @@
       "settings": {
         "vnext": [
           {
-            "address": "172.236.233.59",
-            "port": 443,
+            "address": "107.173.237.146",
+            "port": 8443,
             "users": [
               {
-                "id": "abd1c29a-94cb-4648-8d1e-5baae9d2a807",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
+                "id": "1d39f715-2740-4d99-bc3b-197cc48dcee7",
+                "encryption": "none"
               }
             ]
           }
@@ -111,10 +111,10 @@
         "network": "tcp",
         "security": "reality",
         "realitySettings": {
-          "serverName": "www.cloudflare.com",
+          "serverName": "updates.cdn-apple.com",
           "fingerprint": "chrome",
-          "publicKey": "oTMDLwY2hloBfA7ShzVsrFhjL4QXR6mY32B93rMLxV0",
-          "shortId": "525e0ffc773f48ba",
+          "publicKey": "D3ojIs3AUKP_tV0E4TEjh90HBVJp24Nq3qMfdxD30kc",
+          "shortId": "df8611c07d",
           "spiderX": ""
         }
       }
@@ -141,7 +141,7 @@
         "security": "reality",
         "realitySettings": {
           "serverName": "updates.cdn-apple.com",
-          "fingerprint": "firefox",
+          "fingerprint": "chrome",
           "publicKey": "D3ojIs3AUKP_tV0E4TEjh90HBVJp24Nq3qMfdxD30kc",
           "shortId": "df8611c07d",
           "spiderX": ""
@@ -154,125 +154,7 @@
       "settings": {
         "vnext": [
           {
-            "address": "88.216.195.13",
-            "port": 443,
-            "users": [
-              {
-                "id": "3c48b5f5-7766-4896-874e-b3ba1860e83a",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "w-mebel.pro",
-          "fingerprint": "firefox",
-          "publicKey": "4VzPARgETZ4lJIffknTNqmfkP567FqYV94A18Be8vxQ",
-          "shortId": "837f454e9c8a7e19",
-          "spiderX": ""
-        }
-      }
-    },
-    {
-      "tag": "proxy-6",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "freshjuniper.download",
-            "port": 443,
-            "users": [
-              {
-                "id": "6429d27e-a7d4-4e04-ae57-e88243fbbfe3",
-                "encryption": "none"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "localhost",
-          "fingerprint": "chrome",
-          "publicKey": "F2VfBr2UmjDTErB_oruvW5aIvzH_xGfM2AW5_w-DF0I",
-          "shortId": "",
-          "spiderX": ""
-        }
-      }
-    },
-    {
-      "tag": "proxy-7",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "freshjuniper.download",
-            "port": 443,
-            "users": [
-              {
-                "id": "6429d27e-a7d4-4e04-ae57-e88243fbbfe3",
-                "encryption": "none"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "localhost",
-          "fingerprint": "firefox",
-          "publicKey": "F2VfBr2UmjDTErB_oruvW5aIvzH_xGfM2AW5_w-DF0I",
-          "shortId": "",
-          "spiderX": ""
-        }
-      }
-    },
-    {
-      "tag": "proxy-8",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "104.105.138.244",
-            "port": 443,
-            "users": [
-              {
-                "id": "f5c4664b-67ab-4d92-801d-a60984e104d4",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "www.cloudflare.com",
-          "fingerprint": "chrome",
-          "publicKey": "rpROz1JNz8wRk2QT5o7jwE9CzJUWMvPNXoeWyS3c1WM",
-          "shortId": "09994e53af766acd",
-          "spiderX": ""
-        }
-      }
-    },
-    {
-      "tag": "proxy-9",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "hubby.failspace.top",
+            "address": "50.7.36.27",
             "port": 443,
             "users": [
               {
@@ -288,7 +170,119 @@
         "network": "tcp",
         "security": "tls",
         "tlsSettings": {
-          "serverName": "hubby.failspace.top",
+          "serverName": "at-new-ded2.moritech.net",
+          "fingerprint": "firefox",
+          "allowInsecure": false
+        }
+      }
+    },
+    {
+      "tag": "proxy-6",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "viper-22.moriarty-web.com",
+            "port": 443,
+            "users": [
+              {
+                "id": "cd3bb7d9-7df3-4644-ac05-c260990ac277",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "viper-22.moriarty-web.com",
+          "fingerprint": "firefox",
+          "allowInsecure": false
+        }
+      }
+    },
+    {
+      "tag": "proxy-7",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "at-new-ded2.moritech.net",
+            "port": 443,
+            "users": [
+              {
+                "id": "cd3bb7d9-7df3-4644-ac05-c260990ac277",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "at-new-ded2.moritech.net",
+          "fingerprint": "firefox",
+          "allowInsecure": false
+        }
+      }
+    },
+    {
+      "tag": "proxy-8",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "pl3-ded.moritech.net",
+            "port": 443,
+            "users": [
+              {
+                "id": "cd3bb7d9-7df3-4644-ac05-c260990ac277",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "pl3-ded.moritech.net",
+          "fingerprint": "firefox",
+          "allowInsecure": false
+        }
+      }
+    },
+    {
+      "tag": "proxy-9",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "pl3-ded.moritech.net",
+            "port": 443,
+            "users": [
+              {
+                "id": "cd3bb7d9-7df3-4644-ac05-c260990ac277",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "pl3-ded.moritech.net",
           "fingerprint": "firefox",
           "allowInsecure": false
         }
@@ -300,7 +294,119 @@
       "settings": {
         "vnext": [
           {
-            "address": "109.238.95.39",
+            "address": "50.7.249.66",
+            "port": 443,
+            "users": [
+              {
+                "id": "cd3bb7d9-7df3-4644-ac05-c260990ac277",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "pl-new-ded2.moritech.net",
+          "fingerprint": "firefox",
+          "allowInsecure": false
+        }
+      }
+    },
+    {
+      "tag": "proxy-11",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "at-new-ded2.moritech.net",
+            "port": 443,
+            "users": [
+              {
+                "id": "cd3bb7d9-7df3-4644-ac05-c260990ac277",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "at-new-ded2.moritech.net",
+          "fingerprint": "firefox",
+          "allowInsecure": false
+        }
+      }
+    },
+    {
+      "tag": "proxy-12",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "pl-new-ded2.moritech.net",
+            "port": 443,
+            "users": [
+              {
+                "id": "cd3bb7d9-7df3-4644-ac05-c260990ac277",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "pl-new-ded2.moritech.net",
+          "fingerprint": "firefox",
+          "allowInsecure": false
+        }
+      }
+    },
+    {
+      "tag": "proxy-13",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "50.7.249.179",
+            "port": 443,
+            "users": [
+              {
+                "id": "cd3bb7d9-7df3-4644-ac05-c260990ac277",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "pl3-ded.moritech.net",
+          "fingerprint": "firefox",
+          "allowInsecure": false
+        }
+      }
+    },
+    {
+      "tag": "proxy-14",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "85.137.165.160",
             "port": 443,
             "users": [
               {
@@ -325,128 +431,16 @@
       }
     },
     {
-      "tag": "proxy-11",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "viper-7.moriarty-web.com",
-            "port": 443,
-            "users": [
-              {
-                "id": "cd3bb7d9-7df3-4644-ac05-c260990ac277",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "viper-7.moriarty-web.com",
-          "fingerprint": "firefox",
-          "allowInsecure": false
-        }
-      }
-    },
-    {
-      "tag": "proxy-12",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "viper-26.moriarty-web.com",
-            "port": 443,
-            "users": [
-              {
-                "id": "cd3bb7d9-7df3-4644-ac05-c260990ac277",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "viper-26.moriarty-web.com",
-          "fingerprint": "safari",
-          "allowInsecure": false
-        }
-      }
-    },
-    {
-      "tag": "proxy-13",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "viper-26.moriarty-web.com",
-            "port": 443,
-            "users": [
-              {
-                "id": "cd3bb7d9-7df3-4644-ac05-c260990ac277",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "viper-26.moriarty-web.com",
-          "fingerprint": "firefox",
-          "allowInsecure": false
-        }
-      }
-    },
-    {
-      "tag": "proxy-14",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "viper-25.moriarty-web.com",
-            "port": 443,
-            "users": [
-              {
-                "id": "cd3bb7d9-7df3-4644-ac05-c260990ac277",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "viper-25.moriarty-web.com",
-          "fingerprint": "firefox",
-          "allowInsecure": false
-        }
-      }
-    },
-    {
       "tag": "proxy-15",
       "protocol": "vless",
       "settings": {
         "vnext": [
           {
-            "address": "viper-26.moriarty-web.com",
+            "address": "85.137.165.160",
             "port": 443,
             "users": [
               {
-                "id": "cd3bb7d9-7df3-4644-ac05-c260990ac277",
+                "id": "3c48b5f5-7766-4896-874e-b3ba1860e83a",
                 "encryption": "none",
                 "flow": "xtls-rprx-vision"
               }
@@ -456,11 +450,13 @@
       },
       "streamSettings": {
         "network": "tcp",
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "viper-26.moriarty-web.com",
-          "fingerprint": "qq",
-          "allowInsecure": false
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "w-mebel.pro",
+          "fingerprint": "chrome",
+          "publicKey": "R7NfFaabgh-0a2KR0Bfmn3a-O6mDT550OgXUDygDKBs",
+          "shortId": "c603efb3ddaf633d",
+          "spiderX": ""
         }
       }
     },
@@ -470,7 +466,7 @@
       "settings": {
         "vnext": [
           {
-            "address": "31.76.5.3",
+            "address": "pl-new-ded2.moritech.net",
             "port": 443,
             "users": [
               {
@@ -486,7 +482,7 @@
         "network": "tcp",
         "security": "tls",
         "tlsSettings": {
-          "serverName": "viper-26.moriarty-web.com",
+          "serverName": "pl-new-ded2.moritech.net",
           "fingerprint": "firefox",
           "allowInsecure": false
         }
@@ -498,13 +494,12 @@
       "settings": {
         "vnext": [
           {
-            "address": "viper-26.moriarty-web.com",
+            "address": "freshjuniper.download",
             "port": 443,
             "users": [
               {
-                "id": "cd3bb7d9-7df3-4644-ac05-c260990ac277",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
+                "id": "6429d27e-a7d4-4e04-ae57-e88243fbbfe3",
+                "encryption": "none"
               }
             ]
           }
@@ -512,11 +507,13 @@
       },
       "streamSettings": {
         "network": "tcp",
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "viper-26.moriarty-web.com",
-          "fingerprint": "ios",
-          "allowInsecure": false
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "localhost",
+          "fingerprint": "chrome",
+          "publicKey": "F2VfBr2UmjDTErB_oruvW5aIvzH_xGfM2AW5_w-DF0I",
+          "shortId": "",
+          "spiderX": ""
         }
       }
     },
@@ -526,13 +523,12 @@
       "settings": {
         "vnext": [
           {
-            "address": "viper-26.moriarty-web.com",
+            "address": "freshjuniper.download",
             "port": 443,
             "users": [
               {
-                "id": "cd3bb7d9-7df3-4644-ac05-c260990ac277",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
+                "id": "6429d27e-a7d4-4e04-ae57-e88243fbbfe3",
+                "encryption": "none"
               }
             ]
           }
@@ -540,11 +536,13 @@
       },
       "streamSettings": {
         "network": "tcp",
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "viper-26.moriarty-web.com",
-          "fingerprint": "edge",
-          "allowInsecure": false
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "localhost",
+          "fingerprint": "firefox",
+          "publicKey": "F2VfBr2UmjDTErB_oruvW5aIvzH_xGfM2AW5_w-DF0I",
+          "shortId": "",
+          "spiderX": ""
         }
       }
     },
@@ -554,11 +552,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "152.233.53.7",
+            "address": "104.105.138.244",
             "port": 443,
             "users": [
               {
-                "id": "0718d4d6-42ea-4388-a41c-2069a49761f5",
+                "id": "f5c4664b-67ab-4d92-801d-a60984e104d4",
                 "encryption": "none",
                 "flow": "xtls-rprx-vision"
               }
@@ -570,40 +568,10 @@
         "network": "tcp",
         "security": "reality",
         "realitySettings": {
-          "serverName": "api-maps.yandex.ru",
-          "fingerprint": "firefox",
-          "publicKey": "DAdWhCSXRRcho_XopxBKq2-KDupbSY_i2r-FJCy58kY",
-          "shortId": "5a3874f1",
-          "spiderX": ""
-        }
-      }
-    },
-    {
-      "tag": "proxy-20",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "2.26.100.192",
-            "port": 445,
-            "users": [
-              {
-                "id": "40205ae5-d30f-4216-b2e0-0506dbbd382e",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "ads.x5.ru",
-          "fingerprint": "firefox",
-          "publicKey": "Ku60WZ3HEdE07DoEBJ5I9o_fjcN_bhdK8bTW3RJjBmM",
-          "shortId": "c226283c4de5b1ad",
+          "serverName": "www.cloudflare.com",
+          "fingerprint": "chrome",
+          "publicKey": "rpROz1JNz8wRk2QT5o7jwE9CzJUWMvPNXoeWyS3c1WM",
+          "shortId": "09994e53af766acd",
           "spiderX": ""
         }
       }
